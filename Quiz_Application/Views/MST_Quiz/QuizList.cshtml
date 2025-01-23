@@ -1,0 +1,104 @@
+﻿<main id="main" class="main">
+
+    <div class="pagetitle">
+        <h1>QuizData Tables</h1>
+        <nav>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a asp-Controller="Home" asp-action="Index">MST_Quiz</a></li>
+                <li class="breadcrumb-item">Tables</li>
+                <li class="breadcrumb-item active">Data</li>
+            </ol>
+        </nav>
+    </div><!-- End Page Title -->
+
+    <section class="section">
+        <div class="row">
+            <div class="col-lg-12">
+
+                <div class="card">
+                    <div class="card-body">
+                        <a class="btn btn-primary float-end mb-2 mt-4" asp-area="" asp-controller="MST_Quiz" asp-action="QuizForm">+Add Quiz</a>
+
+                        <!-- Table with stripped rows -->
+                        <table class="table datatable">
+                            <body>
+                                <div class="container mt-3">
+                                    <h2 class="mb-4">Quiz Data Table</h2>
+
+                                    
+                                        <thead>
+                                            <tr>
+                                                <th>Quiz ID</th>
+                                                <th>Quiz Name</th>
+                                                <th>Total Questions</th>
+                                                <th>Quiz Date</th>
+                                                <th>User ID</th>
+                                                <th>Created</th>
+                                                <th>Modified</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <!-- Example Row 1 -->
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Math Quiz</td>
+                                                <td>20</td>
+                                                <td>2025-02-10</td>
+                                                <td>101</td>
+                                                <td>2025-01-01 10:00:00</td>
+                                                <td>2025-01-05 15:30:00</td>
+                                            </tr>
+                                            <!-- Example Row 2 -->
+                                            <tr>
+                                                <td>2</td>
+                                                <td>Science Quiz</td>
+                                                <td>25</td>
+                                                <td>2025-02-15</td>
+                                                <td>102</td>
+                                                <td>2025-01-10 12:00:00</td>
+                                                <td>2025-01-12 11:00:00</td>
+                                            </tr>
+                                            <!-- Example Row 3 -->
+                                            <tr>
+                                                <td>3</td>
+                                                <td>History Quiz</td>
+                                                <td>15</td>
+                                                <td>2025-03-01</td>
+                                                <td>103</td>
+                                                <td>2025-01-15 09:45:00</td>
+                                                <td>2025-01-20 14:00:00</td>
+                                            </tr>
+                                            <!-- Example Row 4 -->
+                                            <tr>
+                                                <td>4</td>
+                                                <td>Geography Quiz</td>
+                                                <td>30</td>
+                                                <td>2025-03-10</td>
+                                                <td>104</td>
+                                                <td>2025-01-18 08:30:00</td>
+                                                <td>2025-01-22 13:45:00</td>
+                                            </tr>
+                                            <!-- Example Row 5 -->
+                                            <tr>
+                                                <td>5</td>
+                                                <td>Literature Quiz</td>
+                                                <td>18</td>
+                                                <td>2025-03-15</td>
+                                                <td>105</td>
+                                                <td>2025-01-20 14:15:00</td>
+                                                <td>2025-01-25 16:00:00</td>
+                                            </tr>
+                                        </tbody>
+                                  
+                                </div>
+
+                            </body>
+                    </table>
+                        <!-- End Table with stripped rows -->
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>

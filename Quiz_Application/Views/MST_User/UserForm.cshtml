@@ -1,0 +1,81 @@
+﻿<main id="main" class="main">
+
+    <div class="pagetitle">
+        <h1>UserForm Layouts</h1>
+        <nav>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a asp-Controller="Home" asp-action="Index">MST_User</a></li>
+                <li class="breadcrumb-item">Forms</li>
+                <li class="breadcrumb-item active">Layouts</li>
+            </ol>
+        </nav>
+    </div><!-- End Page Title -->
+    <section class="section">
+        <div class="row">
+            <div class="col-lg-100">
+
+                <div class="card">
+                    <div class="card-body">
+
+                        <!-- Horizontal Form -->
+                        <body>
+                            <div class="container mt-5">
+                                <h2 class="mb-4">User Information Form</h2>
+                                <form action="#" method="POST">
+                                    <div class="mb-3">
+                                        <label for="userid" class="form-label">User ID</label>
+                                        <input type="text" class="form-control" id="userid" name="userid" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="username" class="form-label">User Name</label>
+                                        <input type="text" class="form-control" id="username" name="username" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="password" class="form-label">Password</label>
+                                        <input type="password" class="form-control" id="password" name="password" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="email" name="email" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="mobile" class="form-label">Mobile</label>
+                                        <input type="tel" class="form-control" id="mobile" name="mobile" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="isactive" class="form-label">Is Active</label>
+                                        <select class="form-control" id="isactive" name="isactive" required>
+                                            <option value="1">Active</option>
+                                            <option value="0">Inactive</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="isadmin" class="form-label">Is Admin</label>
+                                        <select class="form-control" id="isadmin" name="isadmin" required>
+                                            <option value="1">Admin</option>
+                                            <option value="0">User</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="created" class="form-label">Created</label>
+                                        <input type="datetime-local" class="form-control" id="created" name="created" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="modified" class="form-label">Modified</label>
+                                        <input type="datetime-local" class="form-control" id="modified" name="modified" required>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </form>
+                            </div>
+
+                            
+                        </body>
+                        <!-- End Horizontal Form -->
+
+                    </div>
+                </div>
+                @*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}

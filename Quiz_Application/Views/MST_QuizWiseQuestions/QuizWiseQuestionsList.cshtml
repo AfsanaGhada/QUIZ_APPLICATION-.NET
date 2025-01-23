@@ -1,0 +1,82 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<main id="main" class="main">
+
+    <div class="pagetitle">
+        <h1>QuizWiseQueData Tables</h1>
+        <nav>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a asp-Controller="Home" asp-action="Index">MST_QuizWiseQuestions</a></li>
+                <li class="breadcrumb-item">Tables</li>
+                <li class="breadcrumb-item active">Data</li>
+            </ol>
+        </nav>
+    </div><!-- End Page Title -->
+
+    <section class="section">
+        <div class="row">
+            <div class="col-lg-12">
+
+                <div class="card">
+                    <div class="card-body">
+                        <a class="btn btn-primary float-end mb-2 mt-4" asp-area="" asp-controller="MST_QuizWiseQuestions" asp-action="QuizWiseQuestionsForm">+Add QuizWiseQuestions</a>
+
+                        <!-- Table with stripped rows -->
+                        <table class="table datatable">
+                            <body>
+                                <div class="container mt-3">
+                                    <h2 class="mb-4">Quiz Wise Questions Data</h2>
+
+                                        <thead>
+                                            <tr>
+                                                <th>QuizWiseQuestionsID</th>
+                                                <th>QuizID</th>
+                                                <th>QuestionID</th>
+                                                <th>UserID</th>
+                                                <th>Created</th>
+                                                <th>Modified</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <!-- Example Row 1 -->
+                                            <tr>
+                                                <td>1</td>
+                                                <td>1</td>
+                                                <td>1</td>
+                                                <td>1</td>
+                                                <td>2025-01-20 10:30</td>
+                                                <td>2025-01-20 11:00</td>
+                                            </tr>
+                                            <!-- Example Row 2 -->
+                                            <tr>
+                                                <td>2</td>
+                                                <td>2</td>
+                                                <td>2</td>
+                                                <td>2</td>
+                                                <td>2025-01-21 12:00</td>
+                                                <td>2025-01-21 12:15</td>
+                                            </tr>
+                                            <!-- Example Row 3 -->
+                                            <tr>
+                                                <td>3</td>
+                                                <td>3</td>
+                                                <td>3</td>
+                                                <td>3</td>
+                                                <td>2025-01-22 13:30</td>
+                                                <td>2025-01-22 13:45</td>
+                                            </tr>
+                                        </tbody>
+                                </body>
+                        </table>
+                        <!-- End Table with stripped rows -->
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>

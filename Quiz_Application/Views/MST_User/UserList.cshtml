@@ -1,0 +1,125 @@
+﻿
+
+<main id="main" class="main">
+
+    <div class="pagetitle">
+        <h1>UserData Tables</h1>
+        <nav>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">MST_User</a></li>
+                <li class="breadcrumb-item">Tables</li>
+                <li class="breadcrumb-item active">Data</li>
+            </ol>
+        </nav>
+    </div><!-- End Page Title -->
+
+    <section class="section">
+        <div class="row">
+            <div class="col-lg-12">
+
+                <div class="card">
+                    <div class="card-body">
+                        <a class="btn btn-primary float-end mt-4" asp-area="" asp-controller="MST_User" asp-action="UserForm">+Add User</a>
+
+                        
+                        <!-- Table with stripped rows -->
+                        <table class="table datatable">
+                            <body>
+                                <div class="container mt-3">
+                                    <h2 class="mb-4">User Information Table</h2>
+
+                                        <thead>
+                                            <tr>
+                                                <th>User ID</th>
+                                                <th>User Name</th>
+                                                <th>Password</th>
+                                                <th>Email</th>
+                                                <th>Mobile</th>
+                                                <th>Is Active</th>
+                                                <th>Is Admin</th>
+                                                <th>Created</th>
+                                                <th>Modified</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <!-- Example Row 1 -->
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Meet</td>
+                                                <td>password123</td>
+                                                <td>meet@gmail.com</td>
+                                                <td>1234567890</td>
+                                                <td>Active</td>
+                                                <td>User</td>
+                                                <td>2025-01-01 12:00:00</td>
+                                                <td>2025-01-10 14:30:00</td>
+                                            </tr>
+                                            <!-- Example Row 2 -->
+                                            <tr>
+                                                <td>2</td>
+                                                <td>Faizan</td>
+                                                <td>password456</td>
+                                                <td>abc@gmail.com</td>
+                                                <td>9876543210</td>
+                                                <td>Inactive</td>
+                                                <td>Admin</td>
+                                                <td>2025-01-05 09:45:00</td>
+                                                <td>2025-01-12 16:00:00</td>
+                                            </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>asma</td>
+                                    <td>password789</td>
+                                    <td>asma@gmail.com</td>
+                                    <td>1122334455</td>
+                                    <td>Active</td>
+                                    <td>User</td>
+                                    <td>2025-01-07 14:20:00</td>
+                                    <td>2025-01-15 10:45:00</td>
+                                </tr>
+                                <!-- Example Row 4 (Ruchi) -->
+                                <tr>
+                                    <td>4</td>
+                                    <td>ruchi</td>
+                                    <td>password1234</td>
+                                    <td>ruchi@gmail.com</td>
+                                    <td>6677889900</td>
+                                    <td>Active</td>
+                                    <td>User</td>
+                                    <td>2025-01-08 08:30:00</td>
+                                    <td>2025-01-16 11:00:00</td>
+                                </tr>
+                                <!-- Example Row 5 (Afsana) -->
+                                <tr>
+                                    <td>5</td>
+                                    <td>afsana</td>
+                                    <td>password5678</td>
+                                    <td>afsana@gmail.com</td>
+                                    <td>9988776655</td>
+                                    <td>Inactive</td>
+                                    <td>Admin</td>
+                                    <td>2025-01-10 09:15:00</td>
+                                    <td>2025-01-17 15:30:00</td>
+                                </tr>
+                                            <!-- Add more rows as needed -->
+                                        </tbody>
+                                        </body>
+
+                                    </table>
+                                </div>
+
+                               
+                         
+                        <!-- End Table with stripped rows -->
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    @*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}

@@ -1,0 +1,94 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<main id="main" class="main">
+
+    <div class="pagetitle">
+        <h1>QuestionForm Layouts</h1>
+        <nav>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a asp-Controller="Home" asp-action="Index">MST_Question</a></li>
+                <li class="breadcrumb-item">Forms</li>
+                <li class="breadcrumb-item active">Layouts</li>
+            </ol>
+        </nav>
+    </div><!-- End Page Title -->
+    <section class="section">
+        <div class="row">
+            <div class="col-lg-100">
+
+                <div class="card">
+                    <div class="card-body">
+
+                        <!-- Horizontal Form -->
+                        <body>
+                            <div class="container mt-5">
+                                <h2 class="mb-4">Insert Question Information</h2>
+                                <form action="#" method="POST">
+                                    <div class="mb-3">
+                                        <label for="questionid" class="form-label">Question ID</label>
+                                        <input type="number" class="form-control" id="questionid" name="questionid" disabled>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="questiontext" class="form-label">Question Text</label>
+                                        <textarea class="form-control" id="questiontext" name="questiontext" rows="3" required></textarea>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="questionlevelid" class="form-label">Question Level ID</label>
+                                        <input type="number" class="form-control" id="questionlevelid" name="questionlevelid" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="optiona" class="form-label">Option A</label>
+                                        <input type="text" class="form-control" id="optiona" name="optiona" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="optionb" class="form-label">Option B</label>
+                                        <input type="text" class="form-control" id="optionb" name="optionb" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="optionc" class="form-label">Option C</label>
+                                        <input type="text" class="form-control" id="optionc" name="optionc" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="optiond" class="form-label">Option D</label>
+                                        <input type="text" class="form-control" id="optiond" name="optiond" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="correctoption" class="form-label">Correct Option</label>
+                                        <input type="text" class="form-control" id="correctoption" name="correctoption" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="questionmarks" class="form-label">Question Marks</label>
+                                        <input type="number" class="form-control" id="questionmarks" name="questionmarks" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="isactive" class="form-label">Is Active</label>
+                                        <select class="form-control" id="isactive" name="isactive" required>
+                                            <option value="1">Active</option>
+                                            <option value="0">Inactive</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="userid" class="form-label">User ID</label>
+                                        <input type="number" class="form-control" id="userid" name="userid" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="created" class="form-label">Created</label>
+                                        <input type="datetime-local" class="form-control" id="created" name="created" value="" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="modified" class="form-label">Modified</label>
+                                        <input type="datetime-local" class="form-control" id="modified" name="modified" value="" required>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </form>
+                            </div>
+
+                            
+                        </body>
+                        <!-- End Horizontal Form -->
+
+                    </div>
+                </div>

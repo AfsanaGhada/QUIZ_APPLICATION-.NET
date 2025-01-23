@@ -1,0 +1,62 @@
+﻿<main id="main" class="main">
+
+    <div class="pagetitle">
+        <h1>Form Layouts</h1>
+        <nav>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a asp-Controller="Home" asp-action="Index">MST_QuizWiseQuestions</a></li>
+                <li class="breadcrumb-item">Forms</li>
+                <li class="breadcrumb-item active">Layouts</li>
+            </ol>
+        </nav>
+    </div><!-- End Page Title -->
+    <section class="section">
+        <div class="row">
+            <div class="col-lg-100">
+
+                <div class="card">
+                    <div class="card-body">
+
+                        <!-- Horizontal Form -->
+                        <body>
+                            <div class="container mt-5">
+                                <h2 class="mb-4">Insert Quiz Wise Question</h2>
+
+                                <!-- Form for adding quiz wise question data -->
+                                <form action="#" method="POST">
+                                    <div class="mb-3">
+                                        <label for="quizID" class="form-label">Quiz ID</label>
+                                        <input type="number" class="form-control" id="quizID" name="quizID" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="questionID" class="form-label">Question ID</label>
+                                        <input type="number" class="form-control" id="questionID" name="questionID" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="userID" class="form-label">User ID</label>
+                                        <input type="number" class="form-control" id="userID" name="userID" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="created" class="form-label">Created</label>
+                                        <input type="datetime-local" class="form-control" id="created" name="created" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="modified" class="form-label">Modified</label>
+                                        <input type="datetime-local" class="form-control" id="modified" name="modified">
+                                    </div>
+
+                                    <!-- Submit Button -->
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </form>
+                            </div>
+
+                            
+                        </body>
+                        <!-- End Horizontal Form -->
+
+                    </div>
+                </div>@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}

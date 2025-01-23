@@ -1,0 +1,84 @@
+﻿<main id="main" class="main">
+
+    <div class="pagetitle">
+        <h1>QuestionLevelData Tables</h1>
+        <nav>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a asp-Controller="Home" asp-action="Index">MST_QuestionLevel</a></li>
+                <li class="breadcrumb-item">Tables</li>
+                <li class="breadcrumb-item active">Data</li>
+            </ol>
+        </nav>
+    </div><!-- End Page Title -->
+
+    <section class="section">
+        <div class="row">
+            <div class="col-lg-12">
+
+                <div class="card">
+                    <div class="card-body">
+                        <a class="btn btn-primary float-end mt-3" asp-area="" asp-controller="MST_QuestionLevel" asp-action="QuestionLevelForm">+Add QuestionLevel</a>
+
+                        <!-- Table with stripped rows -->
+                        <table class="table datatable">
+                            <body>
+                                <div class="container mt-3">
+                                    <h2 class="mb-4">Question Level Data</h2>
+
+                                        <thead>
+                                            <tr>
+                                                <th>Question Level ID</th>
+                                                <th>Question Level</th>
+                                                <th>User ID</th>
+                                                <th>Created</th>
+                                                <th>Modified</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <!-- Row 1 -->
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Easy</td>
+                                                <td>101</td>
+                                                <td>2025-01-20 10:30</td>
+                                                <td>2025-01-20 10:45</td>
+                                            </tr>
+                                            <!-- Row 2 -->
+                                            <tr>
+                                                <td>2</td>
+                                                <td>Medium</td>
+                                                <td>102</td>
+                                                <td>2025-01-21 11:00</td>
+                                                <td>2025-01-21 11:15</td>
+                                            </tr>
+                                            <!-- Row 3 -->
+                                            <tr>
+                                                <td>3</td>
+                                                <td>Hard</td>
+                                                <td>103</td>
+                                                <td>2025-01-22 12:00</td>
+                                                <td>2025-01-22 12:15</td>
+                                            </tr>
+                                            <!-- Row 4 -->
+                                            <tr>
+                                                <td>4</td>
+                                                <td>Very Hard</td>
+                                                <td>104</td>
+                                                <td>2025-01-23 13:00</td>
+                                                <td>2025-01-23 13:15</td>
+                                            </tr>
+                                        </tbody>
+                                </div>
+
+                                
+                            </body>
+                           </table>
+                        <!-- End Table with stripped rows -->
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+  

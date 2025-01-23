@@ -1,0 +1,128 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<main id="main" class="main">
+
+    <div class="pagetitle">
+        <h1>QuestionData Tables</h1>
+        <nav>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a asp-Controller="Home" asp-action="Index">MST_Question</a></li>
+                <li class="breadcrumb-item">Tables</li>
+                <li class="breadcrumb-item active">Data</li>
+            </ol>
+        </nav>
+    </div><!-- End Page Title -->
+
+    <section class="section">
+        <div class="row">
+            <div class="col-lg-30">
+
+                <div class="card">
+                    <div class="card-body">
+                        <a class="btn btn-primary float-end mb-2 mt-4" asp-area="" asp-controller="MST_Question" asp-action="QuestionForm">+Add Question</a>
+
+
+                        <!-- Table with stripped rows -->
+                        <table class="table datatable">
+                            <body>
+                                <div class="container mt-3">
+                                    <h2 class="mb-4">Inserted Question Data</h2>
+
+
+                            <thead>
+                                <tr>
+                                    <th>Question ID</th>
+                                    <th>Question Text</th>
+                                    <th>Question Level ID</th>
+                                    <th>Option A</th>
+                                    <th>Option B</th>
+                                    <th>Option C</th>
+                                    <th>Option D</th>
+                                    <th>Correct Option</th>
+                                    <th>Question Marks</th>
+                                    <th>Is Active</th>
+                                    <th>User ID</th>
+                                    <th>Created</th>
+                                    <th>Modified</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Row 1 -->
+                                <tr>
+                                    <td>1</td>
+                                    <td>What is the capital of France?</td>
+                                    <td>2</td>
+                                    <td>Paris</td>
+                                    <td>London</td>
+                                    <td>Rome</td>
+                                    <td>Berlin</td>
+                                    <td>A</td>
+                                    <td>5</td>
+                                    <td>1</td>
+                                    <td>101</td>
+                                    <td>2025-01-20 10:30</td>
+                                    <td>2025-01-20 10:45</td>
+                                </tr>
+                                <!-- Row 2 -->
+                                <tr>
+                                    <td>2</td>
+                                    <td>What is the largest planet in the Solar System?</td>
+                                    <td>3</td>
+                                    <td>Jupiter</td>
+                                    <td>Saturn</td>
+                                    <td>Earth</td>
+                                    <td>Mars</td>
+                                    <td>A</td>
+                                    <td>10</td>
+                                    <td>1</td>
+                                    <td>102</td>
+                                    <td>2025-01-21 09:00</td>
+                                    <td>2025-01-21 09:15</td>
+                                </tr>
+                                <!-- Row 3 -->
+                                <tr>
+                                    <td>3</td>
+                                    <td>Who is the inventor of the telephone?</td>
+                                    <td>1</td>
+                                    <td>Alexander Graham Bell</td>
+                                    <td>Thomas Edison</td>
+                                    <td>James Watt</td>
+                                    <td>Michael Faraday</td>
+                                    <td>A</td>
+                                    <td>5</td>
+                                    <td>1</td>
+                                    <td>103</td>
+                                    <td>2025-01-22 11:00</td>
+                                    <td>2025-01-22 11:15</td>
+                                </tr>
+                                <!-- Row 4 -->
+                                <tr>
+                                    <td>4</td>
+                                    <td>Which country is known as the Land of the Rising Sun?</td>
+                                    <td>2</td>
+                                    <td>Japan</td>
+                                    <td>China</td>
+                                    <td>South Korea</td>
+                                    <td>India</td>
+                                    <td>A</td>
+                                    <td>5</td>
+                                    <td>1</td>
+                                    <td>104</td>
+                                    <td>2025-01-23 12:30</td>
+                                    <td>2025-01-23 12:45</td>
+                                </tr>
+                            </tbody>
+                                
+                          </body>
+                            </table>
+                        <!-- End Table with stripped rows -->
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
