@@ -6,10 +6,10 @@
 <main id="main" class="main">
 
     <div class="pagetitle">
-        <h1>QuestionData Tables</h1>
+        <h1>QuestionData </h1>
         <nav>
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a asp-Controller="Home" asp-action="Index">MST_Question</a></li>
+                <li class="breadcrumb-item"><a asp-Controller="Home" asp-action="Index">Home</a></li>
                 <li class="breadcrumb-item">Tables</li>
                 <li class="breadcrumb-item active">Data</li>
             </ol>
@@ -18,20 +18,42 @@
 
     <section class="section">
         <div class="row">
-            <div class="col-lg-30">
+            <div class="col-lg-12">
 
                 <div class="card">
                     <div class="card-body">
-                        <a class="btn btn-primary float-end mb-2 mt-4" asp-area="" asp-controller="MST_Question" asp-action="QuestionForm">+Add Question</a>
+                        <div>
+                            <h5 class="card-title">Search Question</h5>
 
+                            <form class="row g-3">
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control  border border-black" placeholder="Question id">
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control  border border-black" placeholder="Question Text">
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="number" class="form-control  border border-black" placeholder="User id">
+                                </div>
+                                <div class="text-start">
+                                    <button type="submit" class="btn btn-primary">Search</button>
+                                    <button type="reset" class="btn btn-secondary">Reset</button>
+                                </div>
+                            </form><!-- End No Labels Form -->
+                        </div>
+
+                        <br />
+
+                        <h5 class="card-title">Question List</h5>
+                        <div class="d-flex p-3 justify-content-end">
+                            <a asp-controller="MST_Question" asp-action="QuestionForm" class="btn btn-primary w-20">
+                                <i class="bi bi-plus"></i> Add Question
+                            </a>
+                        </div>
 
                         <!-- Table with stripped rows -->
                         <table class="table datatable">
-                            <body>
-                                <div class="container mt-3">
-                                    <h2 class="mb-4">Inserted Question Data</h2>
-
-
+                            
                             <thead>
                                 <tr>
                                     <th>Question ID</th>
@@ -45,8 +67,11 @@
                                     <th>Question Marks</th>
                                     <th>Is Active</th>
                                     <th>User ID</th>
-                                    <th>Created</th>
-                                    <th>Modified</th>
+
+                                    @* <th>Created</th> *@
+                                    @* <th>Modified</th> *@
+                                <th>Action</th>
+
                                 </tr>
                             </thead>
                             <tbody>
@@ -63,8 +88,13 @@
                                     <td>5</td>
                                     <td>1</td>
                                     <td>101</td>
-                                    <td>2025-01-20 10:30</td>
-                                    <td>2025-01-20 10:45</td>
+                                    @* <td>2025-01-20 10:30</td> *@
+                                    @* <td>2025-01-20 10:45</td> *@
+                                @* <td>2025-01-20 10:45</td> *@
+                                <td>
+                                    <a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a>
+                                    <a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a>
+                                </td>
                                 </tr>
                                 <!-- Row 2 -->
                                 <tr>
@@ -79,8 +109,13 @@
                                     <td>10</td>
                                     <td>1</td>
                                     <td>102</td>
-                                    <td>2025-01-21 09:00</td>
-                                    <td>2025-01-21 09:15</td>
+                                    @* <td>2025-01-21 09:00</td> *@
+                                    @* <td>2025-01-21 09:15</td> *@
+                                @* <td>2025-01-20 10:45</td> *@
+                                <td>
+                                    <a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a>
+                                    <a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a>
+                                </td>
                                 </tr>
                                 <!-- Row 3 -->
                                 <tr>
@@ -95,8 +130,13 @@
                                     <td>5</td>
                                     <td>1</td>
                                     <td>103</td>
-                                    <td>2025-01-22 11:00</td>
-                                    <td>2025-01-22 11:15</td>
+                                    @* <td>2025-01-22 11:00</td> *@
+                                    @* <td>2025-01-22 11:15</td> *@
+                                @* <td>2025-01-20 10:45</td> *@
+                                <td>
+                                    <a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a>
+                                    <a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a>
+                                </td>
                                 </tr>
                                 <!-- Row 4 -->
                                 <tr>
@@ -111,12 +151,16 @@
                                     <td>5</td>
                                     <td>1</td>
                                     <td>104</td>
-                                    <td>2025-01-23 12:30</td>
-                                    <td>2025-01-23 12:45</td>
+                                    @* <td>2025-01-23 12:30</td> *@
+                                    @* <td>2025-01-23 12:45</td> *@
+                                @* <td>2025-01-20 10:45</td> *@
+                                <td>
+                                    <a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a>
+                                    <a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a>
+                                </td>
                                 </tr>
                             </tbody>
                                 
-                          </body>
                             </table>
                         <!-- End Table with stripped rows -->
 

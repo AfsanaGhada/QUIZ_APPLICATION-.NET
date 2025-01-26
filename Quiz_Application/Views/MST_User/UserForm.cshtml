@@ -1,10 +1,10 @@
 ﻿<main id="main" class="main">
 
     <div class="pagetitle">
-        <h1>UserForm Layouts</h1>
+        <h1>UserForm</h1>
         <nav>
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a asp-Controller="Home" asp-action="Index">MST_User</a></li>
+                <li class="breadcrumb-item"><a asp-Controller="Home" asp-action="Index">HOME</a></li>
                 <li class="breadcrumb-item">Forms</li>
                 <li class="breadcrumb-item active">Layouts</li>
             </ol>
@@ -22,10 +22,7 @@
                             <div class="container mt-5">
                                 <h2 class="mb-4">User Information Form</h2>
                                 <form action="#" method="POST">
-                                    <div class="mb-3">
-                                        <label for="userid" class="form-label">User ID</label>
-                                        <input type="text" class="form-control" id="userid" name="userid" required>
-                                    </div>
+                                    
                                     <div class="mb-3">
                                         <label for="username" class="form-label">User Name</label>
                                         <input type="text" class="form-control" id="username" name="username" required>
@@ -56,15 +53,11 @@
                                             <option value="0">User</option>
                                         </select>
                                     </div>
-                                    <div class="mb-3">
-                                        <label for="created" class="form-label">Created</label>
-                                        <input type="datetime-local" class="form-control" id="created" name="created" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="modified" class="form-label">Modified</label>
-                                        <input type="datetime-local" class="form-control" id="modified" name="modified" required>
-                                    </div>
+                                    
                                     <button type="submit" class="btn btn-primary">Submit</button>
+                                    <a class="btn btn-danger" asp-area="" asp-controller="MST_User" asp-action="UserList">Cancle</a>
+
+
                                 </form>
                             </div>
 

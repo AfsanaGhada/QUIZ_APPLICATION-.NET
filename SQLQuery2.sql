@@ -300,11 +300,13 @@ EXEC Sp_MST_Quiz_DeleteQuizByID @QuizID = 1;
 ------------------------------- Store procedure for MST_Question------------------------------
 
 -- Stored Procedure: Select All Questions
-CREATE PROCEDURE Sp_MST_Question_SelectAllQuestions
+alter PROCEDURE Sp_MST_Question_SelectAllQuestions
 AS
 BEGIN
-    SELECT QuestionID, QuestionText, QuestionLevelID, OptionA, OptionB, OptionC, OptionD, CorrectOption, QuestionMarks, IsActive, UserID, Created, Modified
-    FROM MST_Question;
+    SELECT QuestionID, QuestionText,MST_Question.QuestionLevelID, OptionA, OptionB, OptionC, OptionD, CorrectOption, QuestionMarks, IsActive,MST_Question.UserID, MST_Question.Created,MST_Question. Modified
+    FROM MST_Question inner join 
+	MST_QuestionLevel ON MST_Question.QuestionLevelID= MST_QuestionLevel.QuestionLevelID;
+
 END;
 
 -- Stored Procedure: Select Question by ID
@@ -504,11 +506,13 @@ EXEC Sp_MST_QuestionLevel_DeleteByID @QuestionLevelID = 4;
 
 
 -- Stored Procedure: Select All QuizWiseQuestions
-CREATE PROCEDURE Sp_MST_QuizWiseQuestions_SelectAll
+alter PROCEDURE Sp_MST_QuizWiseQuestions_SelectAll
 AS
 BEGIN
-    SELECT QuizWiseQuestionsID, QuizID, QuestionID, UserID, Created, Modified
-    FROM MST_QuizWiseQuestions;
+    SELECT QuizWiseQuestionsID,MST_QuizWiseQuestions.QuizID,MST_Quiz.QuizName, MST_QuizWiseQuestions.QuestionID, QuestionText,MST_QuizWiseQuestions.UserID,MST_QuizWiseQuestions.Created, MST_QuizWiseQuestions.Modified
+    FROM MST_QuizWiseQuestions  inner join 
+	MST_Quiz ON MST_QuizWiseQuestions.QuizID= MST_Quiz.QuizID
+	inner join MST_Question on MST_QuizWiseQuestions.QuestionID=MST_Question.QuestionID;
 END;
 
 -- Stored Procedure: Select QuizWiseQuestions by ID

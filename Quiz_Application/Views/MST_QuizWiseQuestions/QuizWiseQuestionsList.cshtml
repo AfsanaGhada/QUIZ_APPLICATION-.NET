@@ -23,22 +23,45 @@
 
                 <div class="card">
                     <div class="card-body">
-                        <a class="btn btn-primary float-end mb-2 mt-4" asp-area="" asp-controller="MST_QuizWiseQuestions" asp-action="QuizWiseQuestionsForm">+Add QuizWiseQuestions</a>
+                        <div>
+                            <h5 class="card-title">Search QuizWiseQuestion</h5>
 
+                            <form class="row g-3">
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control  border border-black" placeholder="QuizWiseQuestionsID">
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control  border border-black" placeholder="QuizID">
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="number" class="form-control  border border-black" placeholder="UserID">
+                                </div>
+                                <div class="text-start">
+                                    <button type="submit" class="btn btn-primary">Search</button>
+                                    <button type="reset" class="btn btn-secondary">Reset</button>
+                                </div>
+                            </form><!-- End No Labels Form -->
+                        </div>
+
+                        <br />
+
+                        <h5 class="card-title">QuizWiseQuestions List</h5>
+                        <div class="d-flex p-3 justify-content-end">
+                            <a asp-controller="MST_QuizWiseQuestions" asp-action="QuizWiseQuestionsForm" class="btn btn-primary w-20">
+                                <i class="bi bi-plus"></i> Add QuizWiseQuestions
+                            </a>
+                        </div>
                         <!-- Table with stripped rows -->
                         <table class="table datatable">
-                            <body>
-                                <div class="container mt-3">
-                                    <h2 class="mb-4">Quiz Wise Questions Data</h2>
-
-                                        <thead>
+                           <thead>
                                             <tr>
                                                 <th>QuizWiseQuestionsID</th>
                                                 <th>QuizID</th>
                                                 <th>QuestionID</th>
                                                 <th>UserID</th>
-                                                <th>Created</th>
-                                                <th>Modified</th>
+                                                @* <th>Created</th> *@
+                                                @* <th>Modified</th> *@
+                                                <th>Action</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -48,8 +71,12 @@
                                                 <td>1</td>
                                                 <td>1</td>
                                                 <td>1</td>
-                                                <td>2025-01-20 10:30</td>
-                                                <td>2025-01-20 11:00</td>
+                                                @* <td>2025-01-20 10:30</td> *@
+                                                @* <td>2025-01-20 11:00</td> *@
+                                    <td>
+                                        <a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a>
+                                        <a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a>
+                                    </td>
                                             </tr>
                                             <!-- Example Row 2 -->
                                             <tr>
@@ -57,8 +84,12 @@
                                                 <td>2</td>
                                                 <td>2</td>
                                                 <td>2</td>
-                                                <td>2025-01-21 12:00</td>
-                                                <td>2025-01-21 12:15</td>
+                                                @* <td>2025-01-21 12:00</td> *@
+                                                @* <td>2025-01-21 12:15</td> *@
+                                    <td>
+                                        <a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a>
+                                        <a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a>
+                                    </td>
                                             </tr>
                                             <!-- Example Row 3 -->
                                             <tr>
@@ -66,11 +97,15 @@
                                                 <td>3</td>
                                                 <td>3</td>
                                                 <td>3</td>
-                                                <td>2025-01-22 13:30</td>
-                                                <td>2025-01-22 13:45</td>
+                                                @* <td>2025-01-22 13:30</td> *@
+                                                @* <td>2025-01-22 13:45</td> *@
+                                    <td>
+                                        <a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a>
+                                        <a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a>
+                                    </td>
                                             </tr>
                                         </tbody>
-                                </body>
+                                
                         </table>
                         <!-- End Table with stripped rows -->
 

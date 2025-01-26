@@ -4,7 +4,7 @@
         <h1>Form Layouts</h1>
         <nav>
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a asp-Controller="Home" asp-action="Index">MST_QuizWiseQuestions</a></li>
+                <li class="breadcrumb-item"><a asp-Controller="Home" asp-action="Index">Home</a></li>
                 <li class="breadcrumb-item">Forms</li>
                 <li class="breadcrumb-item active">Layouts</li>
             </ol>
@@ -36,17 +36,20 @@
                                         <label for="userID" class="form-label">User ID</label>
                                         <input type="number" class="form-control" id="userID" name="userID" required>
                                     </div>
-                                    <div class="mb-3">
-                                        <label for="created" class="form-label">Created</label>
-                                        <input type="datetime-local" class="form-control" id="created" name="created" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="modified" class="form-label">Modified</label>
-                                        <input type="datetime-local" class="form-control" id="modified" name="modified">
-                                    </div>
+                                    @* <div class="mb-3"> *@
+                                    @*     <label for="created" class="form-label">Created</label> *@
+                                    @*     <input type="datetime-local" class="form-control" id="created" name="created" required> *@
+                                    @* </div> *@
+                                    @* <div class="mb-3"> *@
+                                    @*     <label for="modified" class="form-label">Modified</label> *@
+                                    @*     <input type="datetime-local" class="form-control" id="modified" name="modified"> *@
+                                    @* </div> *@
 
                                     <!-- Submit Button -->
                                     <button type="submit" class="btn btn-primary">Submit</button>
+                                    <a class="btn btn-danger" asp-area="" asp-controller="MST_QuizWiseQuestions" asp-action="QuizWiseQuestionsList">Cancle</a>
+
+
                                 </form>
                             </div>
 
