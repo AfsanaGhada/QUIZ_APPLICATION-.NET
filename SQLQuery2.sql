@@ -427,11 +427,12 @@ EXEC Sp_MST_Question_DeleteQuestionByID @QuestionID = 1;  -- Replace '1' with th
 ----------------------------------------Store procudere for MST_QuestionLevel---------------------------------
 
 -- Stored Procedure: Select All Question Levels
-Create PROCEDURE Sp_MST_QuestionLevel_SelectAll
+ALTER PROCEDURE [dbo].[Sp_MST_QuestionLevel_SelectAll]
 AS
 BEGIN
-    SELECT QuestionLevelID, QuestionLevel, UserID, Created, Modified
-    FROM MST_QuestionLevel;
+    SELECT QuestionLevelID, QuestionLevel, MST_QuestionLevel.UserID,MST_User.UserName,MST_QuestionLevel.Created,MST_QuestionLevel.Modified
+    FROM MST_QuestionLevel inner join MST_User 
+	on  MST_User.UserID=MST_QuestionLevel.UserID
 END;
 
 

@@ -6,7 +6,7 @@
 <main id="main" class="main">
 
     <div class="pagetitle">
-        <h1>QuestionData </h1>
+        <h1>Question List </h1>
         <nav>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a asp-Controller="Home" asp-action="Index">Home</a></li>
@@ -51,12 +51,12 @@
                             </a>
                         </div>
 
+                        <div class="overflow-x-scroll">
                         <!-- Table with stripped rows -->
-                        <table class="table datatable">
+                        <table class="table datatable" class="display nowrap " style="width:100%" >
                             
                             <thead>
                                 <tr>
-                                    <th>Question ID</th>
                                     <th>Question Text</th>
                                     <th>Question Level ID</th>
                                     <th>Option A</th>
@@ -77,7 +77,6 @@
                             <tbody>
                                 <!-- Row 1 -->
                                 <tr>
-                                    <td>1</td>
                                     <td>What is the capital of France?</td>
                                     <td>2</td>
                                     <td>Paris</td>
@@ -98,7 +97,6 @@
                                 </tr>
                                 <!-- Row 2 -->
                                 <tr>
-                                    <td>2</td>
                                     <td>What is the largest planet in the Solar System?</td>
                                     <td>3</td>
                                     <td>Jupiter</td>
@@ -119,7 +117,6 @@
                                 </tr>
                                 <!-- Row 3 -->
                                 <tr>
-                                    <td>3</td>
                                     <td>Who is the inventor of the telephone?</td>
                                     <td>1</td>
                                     <td>Alexander Graham Bell</td>
@@ -140,7 +137,6 @@
                                 </tr>
                                 <!-- Row 4 -->
                                 <tr>
-                                    <td>4</td>
                                     <td>Which country is known as the Land of the Rising Sun?</td>
                                     <td>2</td>
                                     <td>Japan</td>
@@ -163,6 +159,7 @@
                                 
                             </table>
                         <!-- End Table with stripped rows -->
+                        </div>
 
                     </div>
                 </div>
