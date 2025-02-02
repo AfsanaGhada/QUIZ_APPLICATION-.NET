@@ -1,4 +1,6 @@
-﻿<main id="main" class="main">
+﻿@model Quiz_Application.Models.QuizWiseQuestion
+
+<main id="main" class="main">
 
     <div class="pagetitle">
         <h1>Add/Edit QulzWiseQuestion</h1>
@@ -26,15 +28,18 @@
                                 <form action="#" method="POST">
                                     <div class="mb-3">
                                         <label for="quizID" class="form-label">Quiz ID</label>
-                                        <input type="number" class="form-control" id="quizID" name="quizID" required>
+                                        <input asp-for="QuizID" type="number" class="form-control">
+                                        <span asp-validation-for="QuizID" class="form-text text-muted"></span>
                                     </div>
                                     <div class="mb-3">
                                         <label for="questionID" class="form-label">Question ID</label>
-                                        <input type="number" class="form-control" id="questionID" name="questionID" required>
+                                        <input asp-for="QuestionID" type="number" class="form-control">
+                                        <span asp-validation-for="QuestionID" class="form-text text-muted"></span>
                                     </div>
                                     <div class="mb-3">
                                         <label for="userID" class="form-label">User ID</label>
-                                        <input type="number" class="form-control" id="userID" name="userID" required>
+                                        <input asp-for="UserID" type="number" class="form-control">
+                                        <span asp-validation-for="UserID" class="form-text text-muted"></span>
                                     </div>
                                     @* <div class="mb-3"> *@
                                     @*     <label for="created" class="form-label">Created</label> *@
@@ -58,8 +63,15 @@
                         <!-- End Horizontal Form -->
 
                     </div>
-                </div>@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+                </div>
+                </div>
+</div>
+</section>
+</main>
+
+@section Scripts {
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js"></script>
+
 }

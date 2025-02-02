@@ -3,6 +3,8 @@
 *@
 @{
 }
+@model Quiz_Application.Models.QuestionLevel
+
 <main id="main" class="main">
 
     <div class="pagetitle">
@@ -31,11 +33,13 @@
                                 <form action="#" method="POST">
                                     <div class="mb-3">
                                         <label for="questionLevel" class="form-label">Question Level</label>
-                                        <input type="text" class="form-control" id="questionLevel" name="questionLevel" required>
+                                        <input  asp-for="QuestionLevelName" type="text" class="form-control">
+                                        <span asp-validation-for="QuestionLevelName" class="form-text text-muted"></span>
                                     </div>
                                     <div class="mb-3">
-                                        <label for="userID" class="form-label">User ID</label>
-                                        <input type="number" class="form-control" id="userID" name="userID" required>
+                                        <label for="userName" class="form-label">User Name</label>
+                                        <input asp-for="UserID" type="text" class="form-control">
+                                        <span asp-validation-for="UserID" class="form-text text-muted"></span>
                                     </div>
                                     @* <div class="mb-3"> *@
                                     @*     <label for="created" class="form-label">Created</label> *@
@@ -59,3 +63,11 @@
 
                     </div>
                 </div>
+                </div></div></section></main>
+
+@section Scripts {
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js"></script>
+
+}

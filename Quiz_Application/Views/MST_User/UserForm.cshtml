@@ -1,4 +1,6 @@
-﻿<main id="main" class="main">
+﻿@model Quiz_Application.Models.User
+
+<main id="main" class="main">
 
     <div class="pagetitle">
         <h1>Add/Edit User</h1>
@@ -25,33 +27,46 @@
                                     
                                     <div class="mb-3">
                                         <label for="username" class="form-label">User Name</label>
-                                        <input type="text" class="form-control" id="username" name="username" required>
+                                        <input asp-for="UserName" type="text" class="form-control">
+                                        <span asp-validation-for="UserName" class="form-text text-muted"></span>
                                     </div>
                                     <div class="mb-3">
                                         <label for="password" class="form-label">Password</label>
-                                        <input type="password" class="form-control" id="password" name="password" required>
+                                        <input asp-for="Password" type="password" class="form-control">
+                                        <span asp-validation-for="Password" class="form-text text-muted"></span>
+
                                     </div>
                                     <div class="mb-3">
                                         <label for="email" class="form-label">Email</label>
-                                        <input type="email" class="form-control" id="email" name="email" required>
+                                        <input asp-for="Email" type="email" class="form-control" >
+                                        <span asp-validation-for="Email" class="form-text text-muted"></span>
+
                                     </div>
                                     <div class="mb-3">
                                         <label for="mobile" class="form-label">Mobile</label>
-                                        <input type="tel" class="form-control" id="mobile" name="mobile" required>
+                                        <input asp-for="Mobile" type="tel" class="form-control" >
+                                        <span asp-validation-for="Mobile" class="form-text text-muted"></span>
+
                                     </div>
                                     <div class="mb-3">
                                         <label for="isactive" class="form-label">Is Active</label>
-                                        <select class="form-control" id="isactive" name="isactive" required>
+                                        <select asp-for="IsActive" class="form-control">
+                                            <option value="">-Select-</option>
+
                                             <option value="1">Active</option>
                                             <option value="0">Inactive</option>
                                         </select>
+                                        <span asp-validation-for="IsActive" class="form-text text-muted"></span>
                                     </div>
                                     <div class="mb-3">
                                         <label for="isadmin" class="form-label">Is Admin</label>
-                                        <select class="form-control" id="isadmin" name="isadmin" required>
+                                        <select asp-for="IsAdmin" class="form-control">
+                                            <option value="">-Select-</option>
+
                                             <option value="1">Admin</option>
                                             <option value="0">User</option>
                                         </select>
+                                        <span asp-validation-for="IsAdmin" class="form-text text-muted"></span>
                                     </div>
                                     
                                     <button type="submit" class="btn btn-primary">Submit</button>
@@ -67,8 +82,19 @@
 
                     </div>
                 </div>
+                </div>
+                </div>
+                </section>
+                </main>
                 @*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
+}
+
+@section Scripts {
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js"></script>
+
 }

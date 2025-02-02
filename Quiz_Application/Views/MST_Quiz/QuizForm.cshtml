@@ -3,6 +3,7 @@
 *@
 @{
 }
+@model Quiz_Application.Models.Quiz
 
 <main id="main" class="main">
 
@@ -28,25 +29,29 @@
                             <div class="container mt-5">
                                 <h2 class="mb-4">Add/Edit Quiz</h2>
                                 <form action="#" method="POST">
-                                    <div class="mb-3">
-                                        <label for="quizid" class="form-label">Quiz id</label>
-                                        <input type="text" class="form-control" id="quizid" name="quizid" required>
-                                    </div>
+                                    @* <div class="mb-3"> *@
+                                    @*     <label for="quizid" class="form-label">Quiz id</label> *@
+                                    @*     <input type="text" class="form-control" id="quizid" name="quizid" required> *@
+                                    @* </div> *@
                                     <div class="mb-3">
                                         <label for="quizname" class="form-label">Quiz Name</label>
-                                        <input type="text" class="form-control" id="quizname" name="quizname" required>
+                                        <input asp-for="QuizName" type="text" class="form-control">
+                                        <span asp-validation-for="QuizName" class="form-text text-muted"></span>
                                     </div>
                                     <div class="mb-3">
                                         <label for="totalquestions" class="form-label">Total Questions</label>
-                                        <input type="number" class="form-control" id="totalquestions" name="totalquestions" required>
+                                        <input asp-for="TotalQuestions" type="number" class="form-control">
+                                        <span asp-validation-for="TotalQuestions" class="form-text text-muted"></span>
                                     </div>
+                                    @* <div class="mb-3"> *@
+                                    @*     <label for="quizdate" class="form-label">Quiz Date</label> *@
+                                    @*     <input type="date" class="form-control" id="quizdate" name="quizdate" required> *@
+                                    @* </div> *@
                                     <div class="mb-3">
-                                        <label for="quizdate" class="form-label">Quiz Date</label>
-                                        <input type="date" class="form-control" id="quizdate" name="quizdate" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="userid" class="form-label">User ID</label>
-                                        <input type="text" class="form-control" id="userid" name="userid" required>
+                                        <label for="userName" class="form-label">User Name</label>
+                                        <input asp-for="UserID" type="text" class="form-control">
+                                        <span asp-validation-for="UserID" class="form-text text-muted"></span>
+
                                     </div>
                                     @* <div class="mb-3"> *@
                                     @*     <label for="created" class="form-label">Created</label> *@
@@ -67,3 +72,13 @@
 
                     </div>
                 </div>
+                </div>
+                </div>
+                </section>
+                </main>
+@section Scripts {
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js"></script>
+
+}

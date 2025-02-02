@@ -3,6 +3,8 @@
 *@
 @{
 }
+@model Quiz_Application.Models.Question
+
 <main id="main" class="main">
 
     <div class="pagetitle">
@@ -30,46 +32,58 @@
                                    
                                     <div class="mb-3">
                                         <label for="questiontext" class="form-label">Question Text</label>
-                                        <textarea class="form-control" id="questiontext" name="questiontext" rows="3" required></textarea>
+                                        <textarea asp-for="QuestionText" class="form-control"></textarea>
+                                        <span asp-validation-for="QuestionText" class="form-text text-muted"></span>
                                     </div>
                                     <div class="mb-3">
                                         <label for="questionlevelid" class="form-label">Question Level ID</label>
-                                        <input type="number" class="form-control" id="questionlevelid" name="questionlevelid" required>
+                                        <input asp-for="QuestionLevelID" type="number" class="form-control">
+                                        <span asp-validation-for="QuestionLevelID" class="form-text text-muted"></span>
                                     </div>
                                     <div class="mb-3">
                                         <label for="optiona" class="form-label">Option A</label>
-                                        <input type="text" class="form-control" id="optiona" name="optiona" required>
+                                        <input asp-for="OptionA" type="text" class="form-control">
+                                        <span asp-validation-for="OptionA" class="form-text text-muted"></span>
                                     </div>
                                     <div class="mb-3">
                                         <label for="optionb" class="form-label">Option B</label>
-                                        <input type="text" class="form-control" id="optionb" name="optionb" required>
+                                        <input asp-for="OptionB" type="text" class="form-control">
+                                        <span asp-validation-for="OptionB" class="form-text text-muted"></span>
                                     </div>
                                     <div class="mb-3">
                                         <label for="optionc" class="form-label">Option C</label>
-                                        <input type="text" class="form-control" id="optionc" name="optionc" required>
+                                        <input asp-for="OptionC" type="text" class="form-control">
+                                        <span asp-validation-for="OptionC" class="form-text text-muted"></span>
                                     </div>
                                     <div class="mb-3">
                                         <label for="optiond" class="form-label">Option D</label>
-                                        <input type="text" class="form-control" id="optiond" name="optiond" required>
+                                        <input  asp-for="OptionD" type="text" class="form-control">
+                                        <span asp-validation-for="OptionD" class="form-text text-muted"></span>
                                     </div>
                                     <div class="mb-3">
                                         <label for="correctoption" class="form-label">Correct Option</label>
-                                        <input type="text" class="form-control" id="correctoption" name="correctoption" required>
+                                        <input asp-for="CorrectOption" type="text" class="form-control">
+                                        <span asp-validation-for="CorrectOption" class="form-text text-muted"></span>
                                     </div>
                                     <div class="mb-3">
                                         <label for="questionmarks" class="form-label">Question Marks</label>
-                                        <input type="number" class="form-control" id="questionmarks" name="questionmarks" required>
+                                        <input asp-for="QuestionMarks" type="number" class="form-control">
+                                        <span asp-validation-for="QuestionMarks" class="form-text text-muted"></span>
                                     </div>
                                     <div class="mb-3">
                                         <label for="isactive" class="form-label">Is Active</label>
-                                        <select class="form-control" id="isactive" name="isactive" required>
+                                        <select asp-for="IsActive" class="form-control">
+                                            <option value="">-Select-</option>
+
                                             <option value="1">Active</option>
                                             <option value="0">Inactive</option>
                                         </select>
+                                        <span asp-validation-for="IsActive" class="form-text text-muted"></span>
                                     </div>
                                     <div class="mb-3">
-                                        <label for="userid" class="form-label">User ID</label>
-                                        <input type="number" class="form-control" id="userid" name="userid" required>
+                                        <label for="userid" class="form-label">User Name</label>
+                                        <input asp-for="UserID" type="number" class="form-control">
+                                        <span asp-validation-for="UserID" class="form-text text-muted"></span>
                                     </div>
                                     @* <div class="mb-3"> *@
                                     @*     <label for="created" class="form-label">Created</label> *@
@@ -95,5 +109,12 @@
                 
             </div>
         </div>
-        </section>
-        </main>
+     </section>
+</main>
+
+@section Scripts {
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js"></script>
+
+}
