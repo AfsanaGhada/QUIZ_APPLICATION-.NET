@@ -12,17 +12,17 @@
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"ye550511jm"},{"Name":"integrity","Value":"sha256-VtE\u002B0YLcCZnsgM3J0TcPS77gxm7TJt9mMWZ8NuKiFhk="},{"Name":"label","Value":"_content/Quiz_Application/assets/css/style.css"}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"20977"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022VtE\u002B0YLcCZnsgM3J0TcPS77gxm7TJt9mMWZ8NuKiFhk=\u0022"},{"Name":"Last-Modified","Value":"Thu, 12 Sep 2024 07:35:54 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/Quiz_Application/assets/img/apple-touch-icon.k5niu5bqjf.png">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\img\apple-touch-icon.png'))</AssetFile>
+    <StaticWebAssetEndpoint Include="_content/Quiz_Application/assets/img/apple-touch-icon.6q2fglgzvf.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\img\apple-touch-icon.jpg'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"k5niu5bqjf"},{"Name":"integrity","Value":"sha256-SHg1AuK/JO72u/PLMXCiKpu0561aLr\u002BLxnIgjNkezCE="},{"Name":"label","Value":"_content/Quiz_Application/assets/img/apple-touch-icon.png"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1201"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022SHg1AuK/JO72u/PLMXCiKpu0561aLr\u002BLxnIgjNkezCE=\u0022"},{"Name":"Last-Modified","Value":"Thu, 12 Sep 2024 07:35:54 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"6q2fglgzvf"},{"Name":"integrity","Value":"sha256-cgDt8XG6rgHGEdD1sp\u002BouogaPKVVJvNU6fTk0Ssqkvo="},{"Name":"label","Value":"_content/Quiz_Application/assets/img/apple-touch-icon.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"84585"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022cgDt8XG6rgHGEdD1sp\u002BouogaPKVVJvNU6fTk0Ssqkvo=\u0022"},{"Name":"Last-Modified","Value":"Tue, 04 Feb 2025 16:53:30 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/Quiz_Application/assets/img/apple-touch-icon.png">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\img\apple-touch-icon.png'))</AssetFile>
+    <StaticWebAssetEndpoint Include="_content/Quiz_Application/assets/img/apple-touch-icon.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\img\apple-touch-icon.jpg'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-SHg1AuK/JO72u/PLMXCiKpu0561aLr\u002BLxnIgjNkezCE="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"1201"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022SHg1AuK/JO72u/PLMXCiKpu0561aLr\u002BLxnIgjNkezCE=\u0022"},{"Name":"Last-Modified","Value":"Thu, 12 Sep 2024 07:35:54 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-cgDt8XG6rgHGEdD1sp\u002BouogaPKVVJvNU6fTk0Ssqkvo="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"84585"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022cgDt8XG6rgHGEdD1sp\u002BouogaPKVVJvNU6fTk0Ssqkvo=\u0022"},{"Name":"Last-Modified","Value":"Tue, 04 Feb 2025 16:53:30 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Quiz_Application/assets/img/card.8c29zuxlps.jpg">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\img\card.jpg'))</AssetFile>
@@ -48,17 +48,17 @@
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-NHfdnYxqKU840JVme5w\u002BH7wp3wSgzdlC7oWkzfVfUKc="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"610"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022NHfdnYxqKU840JVme5w\u002BH7wp3wSgzdlC7oWkzfVfUKc=\u0022"},{"Name":"Last-Modified","Value":"Thu, 12 Sep 2024 07:35:54 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/Quiz_Application/assets/img/logo.6rffgsn36q.png">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\img\logo.png'))</AssetFile>
+    <StaticWebAssetEndpoint Include="_content/Quiz_Application/assets/img/logo.6q2fglgzvf.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\img\logo.jpg'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"6rffgsn36q"},{"Name":"integrity","Value":"sha256-ftL96wM\u002BqOCyVmLAg6RZBhNuTFwz6tf16SWuWfuctQk="},{"Name":"label","Value":"_content/Quiz_Application/assets/img/logo.png"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"738"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022ftL96wM\u002BqOCyVmLAg6RZBhNuTFwz6tf16SWuWfuctQk=\u0022"},{"Name":"Last-Modified","Value":"Thu, 12 Sep 2024 07:35:54 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"6q2fglgzvf"},{"Name":"integrity","Value":"sha256-cgDt8XG6rgHGEdD1sp\u002BouogaPKVVJvNU6fTk0Ssqkvo="},{"Name":"label","Value":"_content/Quiz_Application/assets/img/logo.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"84585"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022cgDt8XG6rgHGEdD1sp\u002BouogaPKVVJvNU6fTk0Ssqkvo=\u0022"},{"Name":"Last-Modified","Value":"Tue, 04 Feb 2025 16:53:30 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/Quiz_Application/assets/img/logo.png">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\img\logo.png'))</AssetFile>
+    <StaticWebAssetEndpoint Include="_content/Quiz_Application/assets/img/logo.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\img\logo.jpg'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-ftL96wM\u002BqOCyVmLAg6RZBhNuTFwz6tf16SWuWfuctQk="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"738"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022ftL96wM\u002BqOCyVmLAg6RZBhNuTFwz6tf16SWuWfuctQk=\u0022"},{"Name":"Last-Modified","Value":"Thu, 12 Sep 2024 07:35:54 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-cgDt8XG6rgHGEdD1sp\u002BouogaPKVVJvNU6fTk0Ssqkvo="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"84585"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022cgDt8XG6rgHGEdD1sp\u002BouogaPKVVJvNU6fTk0Ssqkvo=\u0022"},{"Name":"Last-Modified","Value":"Tue, 04 Feb 2025 16:53:30 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Quiz_Application/assets/img/messages-1.jpg">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\img\messages-1.jpg'))</AssetFile>

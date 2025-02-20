@@ -3,6 +3,8 @@
 *@
 @{
 }
+@model DataTable
+@using System.Data
 <main id="main" class="main">
 
     <div class="pagetitle">
@@ -15,7 +17,6 @@
             </ol>
         </nav>
     </div><!-- End Page Title -->
-
     <section class="section">
         <div class="row">
             <div class="col-lg-12">
@@ -27,136 +28,121 @@
 
                             <form class="row g-3">
                                 <div class="col-md-4">
-                                    <input type="text" class="form-control  border border-black" placeholder="Question id">
+                                    <label for="questionlevelid" class="form-label">Question Level </label>
+                                    <select class="form-control">
+                                        <option value="">Select Level</option>
+
+                                        <option value="1">Easy</option>
+                                        <option value="2">Midium</option>
+                                        <option value="3">Hard</option>
+
+                                    </select>
                                 </div>
                                 <div class="col-md-4">
-                                    <input type="text" class="form-control  border border-black" placeholder="Question Text">
+                                    <label for="userName" class="form-label"> Question</label>
+
+                                    <input type="text" class="form-control  border border-black" placeholder="Enter Question">
                                 </div>
                                 <div class="col-md-4">
-                                    <input type="number" class="form-control  border border-black" placeholder="User id">
+                                    <label for="userName" class="form-label">Min Marks</label>
+
+                                    <input type="text" class="form-control  border border-black">
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="userName" class="form-label">Max Marks</label>
+
+                                    <input type="text" class="form-control  border border-black">
                                 </div>
                                 <div class="text-start">
-                                    <button type="submit" class="btn btn-primary">Search</button>
-                                    <button type="reset" class="btn btn-secondary">Reset</button>
+                                    <button type="submit" class="btn btn-success">Search</button>
+                                    <button type="reset" class="btn btn-danger">Reset</button>
                                 </div>
                             </form><!-- End No Labels Form -->
                         </div>
 
-                        <br />
-
-                        <h5 class="card-title">Question List</h5>
-                        <div class="d-flex p-3 justify-content-end">
-                            <a asp-controller="MST_Question" asp-action="QuestionForm" class="btn btn-primary w-20">
-                                <i class="bi bi-plus"></i> Add Question
-                            </a>
                         </div>
+
+                        </div>
+                        </div>
+                        </div>
+                        </section>
+
+            <br />
+
+    <section class="section">
+        <div class="row">
+            <div class="col-lg-12">
+
+                <div class="card">
+                    <div class="card-body">
+                       
+                            
+
+                      
 
                         <div class="overflow-x-scroll">
                         <!-- Table with stripped rows -->
                         <table class="table datatable" class="display nowrap " style="width:100%" >
-                            
+                                <h2 class="p-3">Question List</h2>
+                                <div class="d-flex justify-content-end">
+                                    <a asp-controller="MST_Question" asp-action="QuestionForm" class="btn btn-primary w-20">
+                                        <i class="bi bi-plus"></i> Add Question
+                                    </a>
+                                </div>
                             <thead>
                                 <tr>
+                                    <th>Question ID</th>
                                     <th>Question Text</th>
-                                    <th>Question Level ID</th>
+                                    <th>Question Level </th>
                                     <th>Option A</th>
                                     <th>Option B</th>
                                     <th>Option C</th>
                                     <th>Option D</th>
                                     <th>Correct Option</th>
                                     <th>Question Marks</th>
-                                    <th>Is Active</th>
+                                    <th> Active</th>
                                     <th>User Name</th>
 
-                                    @* <th>Created</th> *@
-                                    @* <th>Modified</th> *@
-                                <th>Action</th>
+                                    <th>Created</th>
+                                    <th>Modified</th>
+                                     <th>Action</th>
 
                                 </tr>
                             </thead>
                             <tbody>
-                                <!-- Row 1 -->
-                                <tr>
-                                    <td>What is the capital of France?</td>
-                                    <td>2</td>
-                                    <td>Paris</td>
-                                    <td>London</td>
-                                    <td>Rome</td>
-                                    <td>Berlin</td>
-                                    <td>A</td>
-                                    <td>5</td>
-                                    <td>Yes</td>
-                                    <td>Afsana</td>
-                                    @* <td>2025-01-20 10:30</td> *@
-                                    @* <td>2025-01-20 10:45</td> *@
-                                @* <td>2025-01-20 10:45</td> *@
-                                <td>
-                                    <a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a>
-                                    <a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a>
-                                </td>
-                                </tr>
-                                <!-- Row 2 -->
-                                <tr>
-                                    <td>What is the largest planet in the Solar System?</td>
-                                    <td>3</td>
-                                    <td>Jupiter</td>
-                                    <td>Saturn</td>
-                                    <td>Earth</td>
-                                    <td>Mars</td>
-                                    <td>A</td>
-                                    <td>10</td>
-                                    <td>Yes</td>
-                                    <td>Ruchi</td>
-                                    @* <td>2025-01-21 09:00</td> *@
-                                    @* <td>2025-01-21 09:15</td> *@
-                                @* <td>2025-01-20 10:45</td> *@
-                                <td>
-                                    <a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a>
-                                    <a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a>
-                                </td>
-                                </tr>
-                                <!-- Row 3 -->
-                                <tr>
-                                    <td>Who is the inventor of the telephone?</td>
-                                    <td>1</td>
-                                    <td>Alexander Graham Bell</td>
-                                    <td>Thomas Edison</td>
-                                    <td>James Watt</td>
-                                    <td>Michael Faraday</td>
-                                    <td>A</td>
-                                    <td>5</td>
-                                    <td>Yes</td>
-                                    <td>Asma</td>
-                                    @* <td>2025-01-22 11:00</td> *@
-                                    @* <td>2025-01-22 11:15</td> *@
-                                @* <td>2025-01-20 10:45</td> *@
-                                <td>
-                                    <a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a>
-                                    <a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a>
-                                </td>
-                                </tr>
-                                <!-- Row 4 -->
-                                <tr>
-                                    <td>Which country is known as the Land of the Rising Sun?</td>
-                                    <td>2</td>
-                                    <td>Japan</td>
-                                    <td>China</td>
-                                    <td>South Korea</td>
-                                    <td>India</td>
-                                    <td>A</td>
-                                    <td>5</td>
-                                    <td>Yes</td>
-                                    <td>Afsana</td>
-                                    @* <td>2025-01-23 12:30</td> *@
-                                    @* <td>2025-01-23 12:45</td> *@
-                                @* <td>2025-01-20 10:45</td> *@
-                                <td>
-                                    <a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a>
-                                    <a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a>
-                                </td>
-                                </tr>
+                                    @foreach (DataRow dataRow in Model.Rows)
+                                    {
+                                        <tr>
+                                            <td>@dataRow["QuestionID"]</td>
+                                            <td>@dataRow["QuestionText"]</td>
+                                            <td>@dataRow["QuestionLevel"]</td>
+                                            <td>@dataRow["OptionA"]</td>
+                                            <td>@dataRow["OptionB"]</td>
+                                            <td>@dataRow["OptionC"]</td>
+                                            <td>@dataRow["OptionD"]</td>
+                                            <td>@dataRow["CorrectOption"]</td>
+                                            <td>@dataRow["QuestionMarks"]</td>
+
+                                            <td>@dataRow["IsActive"]</td>
+                                            <td>@dataRow["UserName"]</td>
+
+                                            <td>@dataRow["Created"]</td>
+                                            <td>@dataRow["Modified"]</td>
+                                            <td>
+                                                <a asp-controller="MST_Question" asp-action="QuestionForm" class="btn btn-primary btn-sm">
+                                                    <i class="bi bi-pencil-fill"></i>Edit
+
+                                                </a>
+                                                <a asp-controller="MST_Question" asp-action="QuestionDelete" asp-route-QuestionID="@dataRow["QuestionID"]" class="btn btn-danger btn-sm">
+                                                    <i class="bi bi-trash">Delete</i>
+                                                </a>
+
+                                            </td>
+                                        </tr>
+
+                                    }
                             </tbody>
-                                
+                               
                             </table>
                         <!-- End Table with stripped rows -->
                         </div>

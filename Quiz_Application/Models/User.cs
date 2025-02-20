@@ -24,7 +24,7 @@ namespace Quiz_Application.Models
 
         [Required(ErrorMessage = "Mobile number is required")]
         [Phone(ErrorMessage = "Invalid mobile number format")]
-        [StringLength(15, ErrorMessage = "Mobile number cannot exceed 15 digits")]
+        [StringLength(15, MinimumLength = 10, ErrorMessage = "Mobile number cannot exceed 15 digits")]
         public string Mobile { get; set; }
 
         public bool IsActive { get; set; }=true;

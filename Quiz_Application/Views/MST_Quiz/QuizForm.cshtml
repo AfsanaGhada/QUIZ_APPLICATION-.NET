@@ -34,23 +34,35 @@
                                     @*     <input type="text" class="form-control" id="quizid" name="quizid" required> *@
                                     @* </div> *@
                                     <div class="mb-3">
-                                        <label for="quizname" class="form-label">Quiz Name</label>
-                                        <input asp-for="QuizName" type="text" class="form-control">
-                                        <span asp-validation-for="QuizName" class="form-text text-muted"></span>
+                                        <label for="quizname" class="form-label">
+                                            <span style="color: red;">*</span>  Quiz Name
+                                        </label>
+                                        <input asp-for="QuizName" type="text" class="form-control" placeholder="Enter a Quiz Name">
+                                        <span asp-validation-for="QuizName" class="form-text text-danger"></span>
                                     </div>
+
                                     <div class="mb-3">
-                                        <label for="totalquestions" class="form-label">Total Questions</label>
+                                        <label for="totalquestions" class="form-label">
+                                            <span style="color: red;">*</span>Total Questions
+                                        </label>
                                         <input asp-for="TotalQuestions" type="number" class="form-control">
-                                        <span asp-validation-for="TotalQuestions" class="form-text text-muted"></span>
+                                        <span asp-validation-for="TotalQuestions" class="form-text text-danger"></span>
                                     </div>
-                                    @* <div class="mb-3"> *@
-                                    @*     <label for="quizdate" class="form-label">Quiz Date</label> *@
-                                    @*     <input type="date" class="form-control" id="quizdate" name="quizdate" required> *@
-                                    @* </div> *@
+                                    <div class="mb-3"> 
+                                         <label for="quizdate" class="form-label">
+                                            <span style="color: red;">*</span>Quiz Date
+                                        </label>
+                                        <input asp-for="QuizDate" type="date" class="form-control">
+                                        <span asp-validation-for="QuizDate" class="form-text text-danger"></span>
+
+                                     </div>
                                     <div class="mb-3">
-                                        <label for="userName" class="form-label">User Name</label>
-                                        <input asp-for="UserID" type="text" class="form-control">
-                                        <span asp-validation-for="UserID" class="form-text text-muted"></span>
+                                        <label for="userName" class="form-label">
+                                            <span style="color: red;">*</span>User Id
+
+                                        </label>
+                                        <input asp-for="UserID" type="number" class="form-control">
+                                        <span asp-validation-for="UserID" class="form-text text-danger"></span>
 
                                     </div>
                                     @* <div class="mb-3"> *@
@@ -61,9 +73,10 @@
                                     @*     <label for="modified" class="form-label">Modified</label> *@
                                     @*     <input type="datetime-local" class="form-control" id="modified" name="modified" required> *@
                                     @* </div> *@
-                                    <button type="submit" class="btn btn-primary">Submit</button>
-                                    <a class="btn btn-danger" asp-area="" asp-controller="MST_Quiz" asp-action="QuizList">Cancle</a>
 
+                                    <button type="submit" class="btn btn-success">Submit</button>
+                                    <a class="btn btn-danger" asp-area="" asp-controller="MST_Quiz" asp-action="QuizList">Cancle</a>
+                                    
                                 </form>
                             </div>
 

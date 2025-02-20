@@ -167,8 +167,8 @@
       ]
     },
     {
-      "Route": "assets/img/apple-touch-icon.k5niu5bqjf.png",
-      "AssetFile": "assets/img/apple-touch-icon.png",
+      "Route": "assets/img/apple-touch-icon.6q2fglgzvf.jpg",
+      "AssetFile": "assets/img/apple-touch-icon.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -181,39 +181,39 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1201"
+          "Value": "84585"
         },
         {
           "Name": "Content-Type",
-          "Value": "image/png"
+          "Value": "image/jpeg"
         },
         {
           "Name": "ETag",
-          "Value": "\"SHg1AuK/JO72u/PLMXCiKpu0561aLr+LxnIgjNkezCE=\""
+          "Value": "\"cgDt8XG6rgHGEdD1sp+ouogaPKVVJvNU6fTk0Ssqkvo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 12 Sep 2024 07:35:54 GMT"
+          "Value": "Tue, 04 Feb 2025 16:53:30 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "k5niu5bqjf"
+          "Value": "6q2fglgzvf"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-SHg1AuK/JO72u/PLMXCiKpu0561aLr+LxnIgjNkezCE="
+          "Value": "sha256-cgDt8XG6rgHGEdD1sp+ouogaPKVVJvNU6fTk0Ssqkvo="
         },
         {
           "Name": "label",
-          "Value": "assets/img/apple-touch-icon.png"
+          "Value": "assets/img/apple-touch-icon.jpg"
         }
       ]
     },
     {
-      "Route": "assets/img/apple-touch-icon.png",
-      "AssetFile": "assets/img/apple-touch-icon.png",
+      "Route": "assets/img/apple-touch-icon.jpg",
+      "AssetFile": "assets/img/apple-touch-icon.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -226,25 +226,25 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1201"
+          "Value": "84585"
         },
         {
           "Name": "Content-Type",
-          "Value": "image/png"
+          "Value": "image/jpeg"
         },
         {
           "Name": "ETag",
-          "Value": "\"SHg1AuK/JO72u/PLMXCiKpu0561aLr+LxnIgjNkezCE=\""
+          "Value": "\"cgDt8XG6rgHGEdD1sp+ouogaPKVVJvNU6fTk0Ssqkvo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 12 Sep 2024 07:35:54 GMT"
+          "Value": "Tue, 04 Feb 2025 16:53:30 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-SHg1AuK/JO72u/PLMXCiKpu0561aLr+LxnIgjNkezCE="
+          "Value": "sha256-cgDt8XG6rgHGEdD1sp+ouogaPKVVJvNU6fTk0Ssqkvo="
         }
       ]
     },
@@ -413,8 +413,8 @@
       ]
     },
     {
-      "Route": "assets/img/logo.6rffgsn36q.png",
-      "AssetFile": "assets/img/logo.png",
+      "Route": "assets/img/logo.6q2fglgzvf.jpg",
+      "AssetFile": "assets/img/logo.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -427,39 +427,39 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "738"
+          "Value": "84585"
         },
         {
           "Name": "Content-Type",
-          "Value": "image/png"
+          "Value": "image/jpeg"
         },
         {
           "Name": "ETag",
-          "Value": "\"ftL96wM+qOCyVmLAg6RZBhNuTFwz6tf16SWuWfuctQk=\""
+          "Value": "\"cgDt8XG6rgHGEdD1sp+ouogaPKVVJvNU6fTk0Ssqkvo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 12 Sep 2024 07:35:54 GMT"
+          "Value": "Tue, 04 Feb 2025 16:53:30 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "6rffgsn36q"
+          "Value": "6q2fglgzvf"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-ftL96wM+qOCyVmLAg6RZBhNuTFwz6tf16SWuWfuctQk="
+          "Value": "sha256-cgDt8XG6rgHGEdD1sp+ouogaPKVVJvNU6fTk0Ssqkvo="
         },
         {
           "Name": "label",
-          "Value": "assets/img/logo.png"
+          "Value": "assets/img/logo.jpg"
         }
       ]
     },
     {
-      "Route": "assets/img/logo.png",
-      "AssetFile": "assets/img/logo.png",
+      "Route": "assets/img/logo.jpg",
+      "AssetFile": "assets/img/logo.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -472,25 +472,25 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "738"
+          "Value": "84585"
         },
         {
           "Name": "Content-Type",
-          "Value": "image/png"
+          "Value": "image/jpeg"
         },
         {
           "Name": "ETag",
-          "Value": "\"ftL96wM+qOCyVmLAg6RZBhNuTFwz6tf16SWuWfuctQk=\""
+          "Value": "\"cgDt8XG6rgHGEdD1sp+ouogaPKVVJvNU6fTk0Ssqkvo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 12 Sep 2024 07:35:54 GMT"
+          "Value": "Tue, 04 Feb 2025 16:53:30 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-ftL96wM+qOCyVmLAg6RZBhNuTFwz6tf16SWuWfuctQk="
+          "Value": "sha256-cgDt8XG6rgHGEdD1sp+ouogaPKVVJvNU6fTk0Ssqkvo="
         }
       ]
     },

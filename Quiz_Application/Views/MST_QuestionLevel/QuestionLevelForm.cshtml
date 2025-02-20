@@ -32,14 +32,14 @@
                                 <!-- Form for entering question level data -->
                                 <form action="#" method="POST">
                                     <div class="mb-3">
-                                        <label for="questionLevel" class="form-label">Question Level</label>
-                                        <input  asp-for="QuestionLevelName" type="text" class="form-control">
-                                        <span asp-validation-for="QuestionLevelName" class="form-text text-muted"></span>
+                                        <label for="questionLevel" class="form-label"> <span style="color: red;">*</span> Question Level</label>
+                                        <input asp-for="QuestionLevelName" type="text" class="form-control" placeholder="Enter a Question Level (e.g.,Easy,Midium,Hard)">
+                                        <span asp-validation-for="QuestionLevelName" class="form-text  text-danger"></span>
                                     </div>
                                     <div class="mb-3">
-                                        <label for="userName" class="form-label">User Name</label>
+                                        <label for="userName" class="form-label"> <span style="color: red;">*</span> User Name</label>
                                         <input asp-for="UserID" type="text" class="form-control">
-                                        <span asp-validation-for="UserID" class="form-text text-muted"></span>
+                                        <span asp-validation-for="UserID" class="form-text  text-danger"></span>
                                     </div>
                                     @* <div class="mb-3"> *@
                                     @*     <label for="created" class="form-label">Created</label> *@
@@ -51,7 +51,7 @@
                                     @* </div> *@
 
                                     <!-- Submit Button -->
-                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                    <button type="submit" class="btn btn-success">Submit</button>
                                     <a class="btn btn-danger" asp-area="" asp-controller="MST_QuestionLevel" asp-action="QuestionLevelList">Cancle</a>
 
                                 </form>

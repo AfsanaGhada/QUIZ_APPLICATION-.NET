@@ -1,8 +1,8 @@
 wwwroot\assets\css\style.css
-wwwroot\assets\img\apple-touch-icon.png
+wwwroot\assets\img\apple-touch-icon.jpg
 wwwroot\assets\img\card.jpg
 wwwroot\assets\img\favicon.png
-wwwroot\assets\img\logo.png
+wwwroot\assets\img\logo.jpg
 wwwroot\assets\img\messages-1.jpg
 wwwroot\assets\img\messages-2.jpg
 wwwroot\assets\img\messages-3.jpg

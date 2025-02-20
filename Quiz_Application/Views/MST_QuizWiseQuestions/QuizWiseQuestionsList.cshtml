@@ -3,6 +3,8 @@
 *@
 @{
 }
+@model DataTable
+@using System.Data
 
 <main id="main" class="main">
 
@@ -16,7 +18,6 @@
             </ol>
         </nav>
     </div><!-- End Page Title -->
-
     <section class="section">
         <div class="row">
             <div class="col-lg-12">
@@ -24,26 +25,53 @@
                 <div class="card">
                     <div class="card-body">
                         <div>
-                            <h5 class="card-title">Search QuizWiseQuestion</h5>
+                            <h5 class="card-title">Search Question</h5>
 
                             <form class="row g-3">
                                 <div class="col-md-4">
-                                    <input type="text" class="form-control  border border-black" placeholder="QuizWiseQuestionsID">
-                                </div>
-                                <div class="col-md-4">
-                                    <input type="text" class="form-control  border border-black" placeholder="QuizID">
-                                </div>
-                                <div class="col-md-4">
-                                    <input type="number" class="form-control  border border-black" placeholder="UserID">
+                                    <label for="questionlevelid" class="form-label">Question Level </label>
+                                    <select class="form-control" required>
+                                        <option value="" disabled selected>Select a Quiz</option>
+                                        <option value="Maths Quiz">Maths Quiz</option>
+                                        <option value="General Knowledge Quiz">General Knowledge Quiz</option>
+                                        <option value="Science Quiz">Science Quiz</option>
+                                        <option value="History Quiz">History Quiz</option>
+                                        <option value="Geography Quiz">Geography Quiz</option>
+                                        <option value="Sports Quiz">Sports Quiz</option>
+                                        <option value="Literature Quiz">Literature Quiz</option>
+                                        <option value="Technology Quiz">Technology Quiz</option>
+                                        <option value="Current Affairs Quiz">Current Affairs Quiz</option>
+                                        <option value="Music Quiz">Music Quiz</option>
+                                        <option value="Movie Trivia Quiz">Movie Trivia Quiz</option>
+                                        <option value="Logical Reasoning Quiz">Logical Reasoning Quiz</option>
+                                        <option value="Brain Teasers Quiz">Brain Teasers Quiz</option>
+                                        <option value="English Grammar Quiz">English Grammar Quiz</option>
+                                        <option value="Space & Astronomy Quiz">Space & Astronomy Quiz</option>
+                                    </select>
                                 </div>
                                 <div class="text-start">
-                                    <button type="submit" class="btn btn-primary">Search</button>
-                                    <button type="reset" class="btn btn-secondary">Reset</button>
+                                    <button type="submit" class="btn btn-success">Search</button>
+                                    <button type="reset" class="btn btn-danger">Reset</button>
                                 </div>
                             </form><!-- End No Labels Form -->
                         </div>
 
-                        <br />
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <br />
+
+    <section class="section">
+        <div class="row">
+            <div class="col-lg-12">
+
+                <div class="card">
+                    <div class="card-body">
+                           
 
                         <h5 class="card-title">QuizWiseQuestions List</h5>
                         <div class="d-flex p-3 justify-content-end">
@@ -56,54 +84,38 @@
                            <thead>
                                             <tr>
                                                 <th>QuizWiseQuestionsID</th>
-                                                <th>QuizID</th>
-                                                <th>QuestionID</th>
-                                                <th>UserID</th>
-                                                @* <th>Created</th> *@
-                                                @* <th>Modified</th> *@
+                                                <th>Quiz Name</th>
+                                                <th>Entered Question</th>
+                                                <th>User Name</th>
+                                                <th>Created</th>
+                                                <th>Modified</th>
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <!-- Example Row 1 -->
-                                            <tr>
-                                                <td>1</td>
-                                                <td>1</td>
-                                                <td>1</td>
-                                                <td>1</td>
-                                                @* <td>2025-01-20 10:30</td> *@
-                                                @* <td>2025-01-20 11:00</td> *@
-                                    <td>
-                                        <a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a>
-                                        <a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a>
-                                    </td>
-                                            </tr>
-                                            <!-- Example Row 2 -->
-                                            <tr>
-                                                <td>2</td>
-                                                <td>2</td>
-                                                <td>2</td>
-                                                <td>2</td>
-                                                @* <td>2025-01-21 12:00</td> *@
-                                                @* <td>2025-01-21 12:15</td> *@
-                                    <td>
-                                        <a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a>
-                                        <a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a>
-                                    </td>
-                                            </tr>
-                                            <!-- Example Row 3 -->
-                                            <tr>
-                                                <td>3</td>
-                                                <td>3</td>
-                                                <td>3</td>
-                                                <td>3</td>
-                                                @* <td>2025-01-22 13:30</td> *@
-                                                @* <td>2025-01-22 13:45</td> *@
-                                    <td>
-                                        <a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-pencil"></i></a>
-                                        <a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a>
-                                    </td>
-                                            </tr>
+                                @foreach (DataRow dataRow in Model.Rows)
+                                {
+                                    <tr>
+                                        <td>@dataRow["QuizWiseQuestionsID"]</td>
+                                        <td>@dataRow["QuizName"]</td>
+                                        <td>@dataRow["QuestionText"]</td>
+                                        
+                                        <td>@dataRow["UserName"]</td>
+                                        <td>@dataRow["Created"]</td>
+                                        <td>@dataRow["Modified"]</td>
+                                        <td>
+                                            <a asp-controller="MST_QuizWiseQuestions" asp-action="QuizWiseQuestionsForm" class="btn btn-primary">
+                                                <i class="bi bi-pencil-fill"></i>Edit
+
+                                            </a>
+                                            <a asp-controller="MST_QuizWiseQuestions" asp-action="QuizWiseQuestionsDelete" asp-route-QuizWiseQuestionsID="@dataRow["QuizWiseQuestionsID"]" class="btn btn-danger btn-xs">
+                                                <i class="bi bi-trash">Delete</i>
+                                            </a>
+
+                                        </td>
+
+                                    </tr>
+                                }
                                         </tbody>
                                 
                         </table>

@@ -2,7 +2,10 @@
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
+    Layout = "LoginLayout";
 }
+@model Quiz_Application.Models.User
+
  <main>
     <div class="container">
 
@@ -11,48 +14,57 @@
           <div class="row justify-content-center">
             <div class="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center">
 
-              <div class="d-flex justify-content-center py-4">
-                  <a asp-Controller="Home" asp-action="Index" class="logo d-flex align-items-center w-auto">
-                  <img src="~/assets/img/logo.png" alt="">
-                  <span class="d-none d-lg-block">NiceAdmin</span>
-                </a>
-              </div><!-- End Logo -->
+                        <div class="justify-content-center align-center text-center py-4">
+                            <div class="justify-content-center>
+                                <a asp-Controller="Home" asp-action="Index" class="logo align-items-center w-auto">
+                                    <img src="~/assets/img/logo.jpg" alt="" class="rounded-circle w-25 h-25 ">
 
+                                </a>
+                            </div>
+                            <div class="d-none d-lg-block card-title text-center pb-0 fs-4">Quiz management System</div>
+                        </div><!-- End Logo -->
               <div class="card mb-3">
                   
                 <div class="card-body">
 
                   <div class="pt-4 pb-2">
-                    <h5 class="card-title text-center pb-0 fs-4">Create an Account</h5>
-                    <p class="text-center small">Enter your personal details to create account</p>
+                    <h5 class="card-title text-center pb-0 fs-4">Resister</h5>
+                    <p class="text-center small">Enter your Details</p>
                   </div>
 
                   <form class="row g-3 needs-validation" novalidate>
                     <div class="col-12">
                       <label for="yourName" class="form-label">Your Name</label>
-                      <input type="text" name="name" class="form-control" id="yourName" required>
-                      <div class="invalid-feedback">Please, enter your name!</div>
+                                        <input asp-for="UserName" type="text" class="form-control">
+                                        <span asp-validation-for="UserName" class="form-text text-danger"></span>
+
                     </div>
 
                     <div class="col-12">
                       <label for="yourEmail" class="form-label">Your Email</label>
-                      <input type="email" name="email" class="form-control" id="yourEmail" required>
-                      <div class="invalid-feedback">Please enter a valid Email adddress!</div>
+                                        <input asp-for="Email" type="email" class="form-control">
+                                        <span asp-validation-for="Email" class="form-text text-danger"></span>
+
                     </div>
 
-                    <div class="col-12">
-                      <label for="yourUsername" class="form-label">Username</label>
-                      <div class="input-group has-validation">
-                        <span class="input-group-text" id="inputGroupPrepend">$</span>
-                        <input type="text" name="username" class="form-control" id="yourUsername" required>
-                        <div class="invalid-feedback">Please choose a username.</div>
-                      </div>
-                    </div>
+                                    <div class="col-12">
+                                        <label for="yourUsername" class="form-label">Username</label>
+                                        <div class="input-group has-validation d-flex flex-column">
+                                            <div class="d-flex flex-row">
+                                                <span class="input-group-text" id="inputGroupPrepend">$</span>
+                                                <input asp-for="UserName" type="text" class="form-control"><hr />
+                                            </div>
+                                            <div>
+                                                <span asp-validation-for="UserName" class="form-text text-danger"></span>
+                                            </div>
+                                        </div>
+                                    </div>
 
                     <div class="col-12">
                       <label for="yourPassword" class="form-label">Password</label>
-                      <input type="password" name="password" class="form-control" id="yourPassword" required>
-                      <div class="invalid-feedback">Please enter your password!</div>
+                                        <input asp-for="Password" type="password" class="form-control">
+                                        <span asp-validation-for="Password" class="form-text text-danger"></span>
+
                     </div>
 
                     <div class="col-12">
@@ -63,7 +75,7 @@
                       </div>
                     </div>
                     <div class="col-12">
-                      <button class="btn btn-primary w-100" type="submit">Create Account</button>
+                            <button asp-Controller="Home" asp-action="Index" class="btn btn-primary w-100" type="submit">Create Account</button>
                     </div>
                     <div class="col-12">
                                         <p class="small mb-0">Already have an account? <a asp-Controller="Home" asp-action="Login">Log in</a></p>
@@ -89,3 +101,9 @@
 
     </div>
   </main><!-- End #main -->
+@section Scripts {
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js"></script>
+
+}

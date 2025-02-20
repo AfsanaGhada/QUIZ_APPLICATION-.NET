@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "0gSEVeJl1Pc7gEzDvB2dsPKnoXG5M8TQeRlxGI9uLtk=",
+  "Hash": "J/BJkjpG1S2q1v3mRZZ3vQr1kqX2KoRsE2EFe1Fcmmk=",
   "Source": "Quiz_Application",
   "BasePath": "_content/Quiz_Application",
   "Mode": "Default",
@@ -80,12 +80,12 @@
       "OriginalItemSpec": "wwwroot\\assets\\css\\style.css"
     },
     {
-      "Identity": "D:\\SEMESTER_4\\ASP.NET\\PRACTICAL\\Quiz_Application\\Quiz_Application\\wwwroot\\assets\\img\\apple-touch-icon.png",
+      "Identity": "D:\\SEMESTER_4\\ASP.NET\\PRACTICAL\\Quiz_Application\\Quiz_Application\\wwwroot\\assets\\img\\apple-touch-icon.jpg",
       "SourceId": "Quiz_Application",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\SEMESTER_4\\ASP.NET\\PRACTICAL\\Quiz_Application\\Quiz_Application\\wwwroot\\",
       "BasePath": "_content/Quiz_Application",
-      "RelativePath": "assets/img/apple-touch-icon#[.{fingerprint}]?.png",
+      "RelativePath": "assets/img/apple-touch-icon#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -94,11 +94,11 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "k5niu5bqjf",
-      "Integrity": "SHg1AuK/JO72u/PLMXCiKpu0561aLr+LxnIgjNkezCE=",
+      "Fingerprint": "6q2fglgzvf",
+      "Integrity": "cgDt8XG6rgHGEdD1sp+ouogaPKVVJvNU6fTk0Ssqkvo=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\apple-touch-icon.png"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\apple-touch-icon.jpg"
     },
     {
       "Identity": "D:\\SEMESTER_4\\ASP.NET\\PRACTICAL\\Quiz_Application\\Quiz_Application\\wwwroot\\assets\\img\\card.jpg",
@@ -143,12 +143,12 @@
       "OriginalItemSpec": "wwwroot\\assets\\img\\favicon.png"
     },
     {
-      "Identity": "D:\\SEMESTER_4\\ASP.NET\\PRACTICAL\\Quiz_Application\\Quiz_Application\\wwwroot\\assets\\img\\logo.png",
+      "Identity": "D:\\SEMESTER_4\\ASP.NET\\PRACTICAL\\Quiz_Application\\Quiz_Application\\wwwroot\\assets\\img\\logo.jpg",
       "SourceId": "Quiz_Application",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\SEMESTER_4\\ASP.NET\\PRACTICAL\\Quiz_Application\\Quiz_Application\\wwwroot\\",
       "BasePath": "_content/Quiz_Application",
-      "RelativePath": "assets/img/logo#[.{fingerprint}]?.png",
+      "RelativePath": "assets/img/logo#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -157,11 +157,11 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "6rffgsn36q",
-      "Integrity": "ftL96wM+qOCyVmLAg6RZBhNuTFwz6tf16SWuWfuctQk=",
+      "Fingerprint": "6q2fglgzvf",
+      "Integrity": "cgDt8XG6rgHGEdD1sp+ouogaPKVVJvNU6fTk0Ssqkvo=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\logo.png"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\logo.jpg"
     },
     {
       "Identity": "D:\\SEMESTER_4\\ASP.NET\\PRACTICAL\\Quiz_Application\\Quiz_Application\\wwwroot\\assets\\img\\messages-1.jpg",
@@ -11882,8 +11882,8 @@
       ]
     },
     {
-      "Route": "assets/img/apple-touch-icon.k5niu5bqjf.png",
-      "AssetFile": "D:\\SEMESTER_4\\ASP.NET\\PRACTICAL\\Quiz_Application\\Quiz_Application\\wwwroot\\assets\\img\\apple-touch-icon.png",
+      "Route": "assets/img/apple-touch-icon.6q2fglgzvf.jpg",
+      "AssetFile": "D:\\SEMESTER_4\\ASP.NET\\PRACTICAL\\Quiz_Application\\Quiz_Application\\wwwroot\\assets\\img\\apple-touch-icon.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -11892,19 +11892,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1201"
+          "Value": "84585"
         },
         {
           "Name": "Content-Type",
-          "Value": "image/png"
+          "Value": "image/jpeg"
         },
         {
           "Name": "ETag",
-          "Value": "\"SHg1AuK/JO72u/PLMXCiKpu0561aLr+LxnIgjNkezCE=\""
+          "Value": "\"cgDt8XG6rgHGEdD1sp+ouogaPKVVJvNU6fTk0Ssqkvo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 12 Sep 2024 07:35:54 GMT"
+          "Value": "Tue, 04 Feb 2025 16:53:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11914,21 +11914,21 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "k5niu5bqjf"
+          "Value": "6q2fglgzvf"
         },
         {
           "Name": "label",
-          "Value": "assets/img/apple-touch-icon.png"
+          "Value": "assets/img/apple-touch-icon.jpg"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-SHg1AuK/JO72u/PLMXCiKpu0561aLr+LxnIgjNkezCE="
+          "Value": "sha256-cgDt8XG6rgHGEdD1sp+ouogaPKVVJvNU6fTk0Ssqkvo="
         }
       ]
     },
     {
-      "Route": "assets/img/apple-touch-icon.png",
-      "AssetFile": "D:\\SEMESTER_4\\ASP.NET\\PRACTICAL\\Quiz_Application\\Quiz_Application\\wwwroot\\assets\\img\\apple-touch-icon.png",
+      "Route": "assets/img/apple-touch-icon.jpg",
+      "AssetFile": "D:\\SEMESTER_4\\ASP.NET\\PRACTICAL\\Quiz_Application\\Quiz_Application\\wwwroot\\assets\\img\\apple-touch-icon.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -11937,19 +11937,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1201"
+          "Value": "84585"
         },
         {
           "Name": "Content-Type",
-          "Value": "image/png"
+          "Value": "image/jpeg"
         },
         {
           "Name": "ETag",
-          "Value": "\"SHg1AuK/JO72u/PLMXCiKpu0561aLr+LxnIgjNkezCE=\""
+          "Value": "\"cgDt8XG6rgHGEdD1sp+ouogaPKVVJvNU6fTk0Ssqkvo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 12 Sep 2024 07:35:54 GMT"
+          "Value": "Tue, 04 Feb 2025 16:53:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11959,7 +11959,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-SHg1AuK/JO72u/PLMXCiKpu0561aLr+LxnIgjNkezCE="
+          "Value": "sha256-cgDt8XG6rgHGEdD1sp+ouogaPKVVJvNU6fTk0Ssqkvo="
         }
       ]
     },
@@ -12128,8 +12128,8 @@
       ]
     },
     {
-      "Route": "assets/img/logo.6rffgsn36q.png",
-      "AssetFile": "D:\\SEMESTER_4\\ASP.NET\\PRACTICAL\\Quiz_Application\\Quiz_Application\\wwwroot\\assets\\img\\logo.png",
+      "Route": "assets/img/logo.6q2fglgzvf.jpg",
+      "AssetFile": "D:\\SEMESTER_4\\ASP.NET\\PRACTICAL\\Quiz_Application\\Quiz_Application\\wwwroot\\assets\\img\\logo.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -12138,19 +12138,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "738"
+          "Value": "84585"
         },
         {
           "Name": "Content-Type",
-          "Value": "image/png"
+          "Value": "image/jpeg"
         },
         {
           "Name": "ETag",
-          "Value": "\"ftL96wM+qOCyVmLAg6RZBhNuTFwz6tf16SWuWfuctQk=\""
+          "Value": "\"cgDt8XG6rgHGEdD1sp+ouogaPKVVJvNU6fTk0Ssqkvo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 12 Sep 2024 07:35:54 GMT"
+          "Value": "Tue, 04 Feb 2025 16:53:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -12160,21 +12160,21 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "6rffgsn36q"
+          "Value": "6q2fglgzvf"
         },
         {
           "Name": "label",
-          "Value": "assets/img/logo.png"
+          "Value": "assets/img/logo.jpg"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-ftL96wM+qOCyVmLAg6RZBhNuTFwz6tf16SWuWfuctQk="
+          "Value": "sha256-cgDt8XG6rgHGEdD1sp+ouogaPKVVJvNU6fTk0Ssqkvo="
         }
       ]
     },
     {
-      "Route": "assets/img/logo.png",
-      "AssetFile": "D:\\SEMESTER_4\\ASP.NET\\PRACTICAL\\Quiz_Application\\Quiz_Application\\wwwroot\\assets\\img\\logo.png",
+      "Route": "assets/img/logo.jpg",
+      "AssetFile": "D:\\SEMESTER_4\\ASP.NET\\PRACTICAL\\Quiz_Application\\Quiz_Application\\wwwroot\\assets\\img\\logo.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -12183,19 +12183,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "738"
+          "Value": "84585"
         },
         {
           "Name": "Content-Type",
-          "Value": "image/png"
+          "Value": "image/jpeg"
         },
         {
           "Name": "ETag",
-          "Value": "\"ftL96wM+qOCyVmLAg6RZBhNuTFwz6tf16SWuWfuctQk=\""
+          "Value": "\"cgDt8XG6rgHGEdD1sp+ouogaPKVVJvNU6fTk0Ssqkvo=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 12 Sep 2024 07:35:54 GMT"
+          "Value": "Tue, 04 Feb 2025 16:53:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -12205,7 +12205,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-ftL96wM+qOCyVmLAg6RZBhNuTFwz6tf16SWuWfuctQk="
+          "Value": "sha256-cgDt8XG6rgHGEdD1sp+ouogaPKVVJvNU6fTk0Ssqkvo="
         }
       ]
     },
