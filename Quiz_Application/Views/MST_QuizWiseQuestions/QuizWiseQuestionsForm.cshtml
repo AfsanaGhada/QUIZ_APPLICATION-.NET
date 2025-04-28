@@ -25,17 +25,46 @@
                                 <h2 class="mb-4">Add/Edit QuizWiseQuestion</h2>
 
                                 <!-- Form for adding quiz wise question data -->
-                                <form action="#" method="POST">
+                                <form asp-action="QuizWiseQuestionSave" asp-controller="MST_QuizWiseQuestions" method="POST">
+                                    <input type="hidden" asp-for="QuizWiseQuestionsID" />
+
+                                    @* <div class="mb-3"> *@
+                                    @*     <label for="quizID" class="form-label"> <span style="color: red;">*</span> Quiz Name</label> *@
+                                    @*     <input asp-for="QuizID" type="number" class="form-control" placeholder="Enter Quiz Name"> *@
+                                    @*     <span asp-validation-for="QuizID" class="form-text  text-danger"></span> *@
+                                    @* </div> *@
                                     <div class="mb-3">
-                                        <label for="quizID" class="form-label"> <span style="color: red;">*</span> Quiz Name</label>
-                                        <input asp-for="QuizID" type="number" class="form-control" placeholder="Enter Quiz Name">
-                                        <span asp-validation-for="QuizID" class="form-text  text-danger"></span>
+                                        <label for="quizID" class="form-label">
+                                            <span style="color: red;">*</span> Quiz Name
+                                        </label>
+                                        <select asp-for="QuizID" class="form-control">
+                                            <option value="">Select Quiz</option>
+                                            @foreach (var quiz in ViewBag.QuizList)
+                                            {
+                                                <option value="@quiz.QuizID">@quiz.QuizName</option>
+                                            }
+                                        </select>
+                                        <span asp-validation-for="QuizID" class="form-text text-danger"></span>
                                     </div>
+
+
                                     <div class="mb-3">
-                                        <label for="questionID" class="form-label"> <span style="color: red;">*</span> Question </label>
-                                        <input asp-for="QuestionID" type="number" class="form-control" placeholder="Enter Question">
+                                        <label for="questionID" class="form-label">
+                                            <span style="color: red;">*</span> Question
+                                        </label>
+                                        <select asp-for="QuestionID" class="form-control">
+                                            <option value="">Select Question</option>
+                                            @if (ViewBag.QuestionList != null)
+                                            {
+                                                @foreach (var question in ViewBag.QuestionList)
+                                                {
+                                                    <option value="@question.QuestionID">@question.QuestionText</option>
+                                                }
+                                            }
+                                        </select>
                                         <span asp-validation-for="QuestionID" class="form-text text-danger"></span>
                                     </div>
+
                                     <div class="mb-3">
                                         <label for="userID" class="form-label"> <span style="color: red;">*</span> User Name</label>
                                         <input asp-for="UserID" type="number" class="form-control" placeholder="Enter User Name">

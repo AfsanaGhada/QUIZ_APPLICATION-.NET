@@ -28,7 +28,9 @@
                         <body>
                             <div class="container mt-5">
                                 <h2 class="mb-4">Add/Edit Quiz</h2>
-                                <form action="#" method="POST">
+                                <form asp-action="QuizSave" asp-controller="MST_Quiz" method="POST">
+                                    <input type="hidden" asp-for="QuizID" />
+
                                     @* <div class="mb-3"> *@
                                     @*     <label for="quizid" class="form-label">Quiz id</label> *@
                                     @*     <input type="text" class="form-control" id="quizid" name="quizid" required> *@

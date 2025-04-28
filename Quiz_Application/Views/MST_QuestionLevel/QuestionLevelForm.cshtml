@@ -30,7 +30,9 @@
                                 <h2 class="mb-4">Add/Edit QuestionLevel</h2>
 
                                 <!-- Form for entering question level data -->
-                                <form action="#" method="POST">
+                                <form asp-action="QuestionLevelSave" asp-controller="MST_QuestionLevel" method="POST">
+                                    <input type="hidden" asp-for="QuestionLevelID" />
+
                                     <div class="mb-3">
                                         <label for="questionLevel" class="form-label"> <span style="color: red;">*</span> Question Level</label>
                                         <input asp-for="QuestionLevelName" type="text" class="form-control" placeholder="Enter a Question Level (e.g.,Easy,Midium,Hard)">
@@ -52,7 +54,7 @@
 
                                     <!-- Submit Button -->
                                     <button type="submit" class="btn btn-success">Submit</button>
-                                    <a class="btn btn-danger" asp-area="" asp-controller="MST_QuestionLevel" asp-action="QuestionLevelList">Cancle</a>
+                                    <a class="btn btn-danger" asp-controller="MST_QuestionLevel" asp-action="QuestionLevelList">Cancle</a>
 
                                 </form>
                             </div>

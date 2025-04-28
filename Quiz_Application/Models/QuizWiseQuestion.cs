@@ -5,6 +5,8 @@ namespace Quiz_Application.Models
 {
     public class QuizWiseQuestion
     {
+        public int? QuizWiseQuestionsID { get; set; }
+
         [Required(ErrorMessage = "Quiz ID is required")]
         [ForeignKey("Quiz")]
         public int QuizID { get; set; } // Foreign Key to MST_Quiz

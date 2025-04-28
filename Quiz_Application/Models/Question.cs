@@ -4,6 +4,7 @@ namespace Quiz_Application.Models
 {
     public class Question
     {
+        public int? QuestionID { get; set; }
         [Required(ErrorMessage = "Question text is required")]
         public string QuestionText { get; set; }
 
@@ -27,7 +28,7 @@ namespace Quiz_Application.Models
         public string OptionD { get; set; }
 
         [Required(ErrorMessage = "Correct option is required")]
-        [RegularExpression("^(A|B|C|D)$", ErrorMessage = "Correct option must be A, B, C, or D")]
+        //[RegularExpression("^(A|B|C|D)$", ErrorMessage = "Correct option must be A, B, C, or D")]
         public string CorrectOption { get; set; }
 
         [Required(ErrorMessage = "Question marks are required")]
@@ -39,5 +40,15 @@ namespace Quiz_Application.Models
         [Required(ErrorMessage = "User ID is required")]
         public int UserID { get; set; } // Foreign Key to MST_User
 
+       
     }
+    public class QuestionLevelDropdown
+    {
+        public int QuestionLevelID { get; set; }
+        public string QuestionLevel { get; set; }
+
+        // Parameterized constructor (optional)
+       
+    }
+
 }

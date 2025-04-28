@@ -2,7 +2,7 @@
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
-    Layout = "LoginLayout";
+    Layout = "_LoginLayout";
 }
 @model Quiz_Application.Models.User
 
@@ -32,7 +32,7 @@
                     <p class="text-center small">Enter your Details</p>
                   </div>
 
-                  <form class="row g-3 needs-validation" novalidate>
+                                <form class="row g-3 needs-validation" asp-controller="MST_User" asp-action="UserRegister" novalidate>
                     <div class="col-12">
                       <label for="yourName" class="form-label">Your Name</label>
                                         <input asp-for="UserName" type="text" class="form-control">
@@ -78,7 +78,7 @@
                             <button asp-Controller="Home" asp-action="Index" class="btn btn-primary w-100" type="submit">Create Account</button>
                     </div>
                     <div class="col-12">
-                                        <p class="small mb-0">Already have an account? <a asp-Controller="Home" asp-action="Login">Log in</a></p>
+                                        <p class="small mb-0">Already have an account? <a asp-Controller="Login" asp-action="Index">Log in</a></p>
                     </div>
                   </form>
 

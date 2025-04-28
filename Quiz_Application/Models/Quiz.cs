@@ -4,6 +4,8 @@ namespace Quiz_Application.Models
 {
     public class Quiz
     {
+        public int? QuizID { get; set; }
+
         [Required(ErrorMessage = "Quiz name is required")]
         [StringLength(100, ErrorMessage = "Quiz name cannot exceed 100 characters")]
         public string QuizName { get; set; }
@@ -20,4 +22,15 @@ namespace Quiz_Application.Models
         public int UserID { get; set; } // Foreign Key to MST_User
 
     }
+    public class QuizDropdown
+    {
+        public int? QuizID { get; set; }
+        public string QuizName { get; set; }
+    }
+    public class QuestionDropdown
+    {
+        public int? QuestionID { get; set; }
+        public string QuestionText { get; set; }
+    }
+
 }

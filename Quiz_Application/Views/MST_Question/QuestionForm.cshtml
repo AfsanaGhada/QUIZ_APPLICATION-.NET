@@ -28,94 +28,83 @@
                         <body>
                             <div class="container mt-5">
                                 <h2 class="mb-4">Add/Edit Question</h2>
-                                <form action="#" method="POST">
-                                   
+                                <form asp-action="QuestionSave" asp-controller="MST_Question" method="POST">
+                                    <input type="hidden" asp-for="QuestionID" />
                                     <div class="mb-3">
                                         <label for="questiontext" class="form-label"><span style="color: red;">*</span>Question Text</label>
                                         <textarea asp-for="QuestionText" class="form-control" placeholder="Enter Question"></textarea>
-                                        <span asp-validation-for="QuestionText" class="form-text  text-danger"></span>
+                                        <span asp-validation-for="QuestionText" class="form-text text-danger"></span>
                                     </div>
+
                                     <div class="mb-3">
-                                        
-                                        <label for="questionlevelid" class="form-label"><span style="color: red;">*</span>Question Level </label>
-                                        <select asp-for="QuestionLevelID" class="form-control">
-                                            <option value="">Select Level</option>
-
-                                            <option value="1">Advance</option>
-                                            <option value="2">Midium</option>
-                                            <option value="3">Basic</option>
-
+                                        <label for="questionlevelid" class="form-label"><span style="color: red;">*</span>Question Level</label>
+                                        <select class="form-select" asp-for="QuestionLevelID" asp-items="@(new SelectList(ViewBag.QuestionLevelList, "QuestionLevelID", "QuestionLevel"))">
+                                            <option value="" selected>Select Question Level</option>
                                         </select>
-                                        <span asp-validation-for="QuestionLevelID" class="form-text  text-danger"></span>
+                                        <span asp-validation-for="QuestionLevelID" class="form-text text-danger"></span>
                                     </div>
+
                                     <div class="mb-3">
                                         <label for="optiona" class="form-label"><span style="color: red;">*</span>Option A</label>
                                         <input asp-for="OptionA" type="text" class="form-control" placeholder="Enter Option A">
-                                        <span asp-validation-for="OptionA" class="form-text  text-danger"></span>
+                                        <span asp-validation-for="OptionA" class="form-text text-danger"></span>
                                     </div>
+
                                     <div class="mb-3">
-                                        <label for="optionb" class="form-label"><span style="color: red;">*</span>ption B</label>
+                                        <label for="optionb" class="form-label"><span style="color: red;">*</span>Option B</label>
                                         <input asp-for="OptionB" type="text" class="form-control" placeholder="Enter Option B">
-                                        <span asp-validation-for="OptionB" class="form-text  text-danger"></span>
+                                        <span asp-validation-for="OptionB" class="form-text text-danger"></span>
                                     </div>
+
                                     <div class="mb-3">
                                         <label for="optionc" class="form-label"><span style="color: red;">*</span>Option C</label>
                                         <input asp-for="OptionC" type="text" class="form-control" placeholder="Enter Option C">
-                                        <span asp-validation-for="OptionC" class="form-text  text-danger"></span>
+                                        <span asp-validation-for="OptionC" class="form-text text-danger"></span>
                                     </div>
+
                                     <div class="mb-3">
                                         <label for="optiond" class="form-label"><span style="color: red;">*</span>Option D</label>
                                         <input asp-for="OptionD" type="text" class="form-control" placeholder="Enter Option D">
-                                        <span asp-validation-for="OptionD" class="form-text  text-danger"></span>
+                                        <span asp-validation-for="OptionD" class="form-text text-danger"></span>
                                     </div>
+
                                     <div class="mb-3">
-                                        
                                         <label for="correctoption" class="form-label"><span style="color: red;">*</span>Correct Option</label>
                                         <select asp-for="CorrectOption" class="form-control">
                                             <option value="">Select Correct Option</option>
-
-                                            <option value="1">Option A</option>
-                                            <option value="2">Option B</option>
-                                            <option value="3">Option C</option>
-                                            <option value="4">Option D</option>
-
+                                            <option value="A">Option A</option>
+                                            <option value="B">Option B</option>
+                                            <option value="C">Option C</option>
+                                            <option value="D">Option D</option>
                                         </select>
-                                        <span asp-validation-for="CorrectOption" class="form-text  text-danger"></span>
+                                        <span asp-validation-for="CorrectOption" class="form-text text-danger"></span>
                                     </div>
+
                                     <div class="mb-3">
                                         <label for="questionmarks" class="form-label"><span style="color: red;">*</span>Question Marks</label>
-                                        <input asp-for="QuestionMarks" type="number" class="form-control">
-                                        <span asp-validation-for="QuestionMarks" class="form-text  text-danger"></span>
+                                        <input asp-for="QuestionMarks" type="number" class="form-control" min="1">
+                                        <span asp-validation-for="QuestionMarks" class="form-text text-danger"></span>
                                     </div>
+
                                     <div class="mb-3">
                                         <label for="isactive" class="form-label"><span style="color: red;">*</span>Is Active</label>
                                         <select asp-for="IsActive" class="form-control">
-                                            <option value="">-Select-</option>
-
-                                            <option value="1">Active</option>
-                                            <option value="0">Inactive</option>
+                                            <option value="true" selected="@(Model.IsActive ? "selected" : null)">Active</option>
+                                            <option value="false" selected="@(Model.IsActive ? null : "selected")">Inactive</option>
                                         </select>
-                                        <span asp-validation-for="IsActive" class="form-text  text-danger"></span>
+                                        <span asp-validation-for="IsActive" class="form-text text-danger"></span>
                                     </div>
+
                                     <div class="mb-3">
                                         <label for="userid" class="form-label"><span style="color: red;">*</span>User ID</label>
-                                        <input asp-for="UserID" type="number" class="form-control">
+                                        <input asp-for="UserID" type="number" class="form-control" min="1">
                                         <span asp-validation-for="UserID" class="form-text text-danger"></span>
                                     </div>
-                                    @* <div class="mb-3"> *@
-                                    @*     <label for="created" class="form-label">Created</label> *@
-                                    @*     <input type="datetime-local" class="form-control" id="created" name="created" value="" required> *@
-                                    @* </div> *@
-                                    @* <div class="mb-3"> *@
-                                    @*     <label for="modified" class="form-label">Modified</label> *@
-                                    @*     <input type="datetime-local" class="form-control" id="modified" name="modified" value="" required> *@
-                                    @* </div> *@
+
                                     <button type="submit" class="btn btn-success">Submit</button>
-                                    <a class="btn btn-danger" asp-area="" asp-controller="MST_Question" asp-action="QuestionList">Cancle</a>
-
-
+                                    <a class="btn btn-danger" asp-controller="MST_Question" asp-action="QuestionList">Cancel</a>
                                 </form>
-                            </div>
+                    </div>
 
                             
                         </body>

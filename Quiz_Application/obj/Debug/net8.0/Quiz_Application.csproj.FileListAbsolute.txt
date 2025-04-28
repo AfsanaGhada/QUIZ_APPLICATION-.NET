@@ -41,3 +41,14 @@ D:\SEMESTER_4\ASP.NET\PRACTICAL\Quiz_Application\Quiz_Application\bin\Debug\net8
 D:\SEMESTER_4\ASP.NET\PRACTICAL\Quiz_Application\Quiz_Application\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Data.SqlClient.dll
 D:\SEMESTER_4\ASP.NET\PRACTICAL\Quiz_Application\Quiz_Application\obj\Debug\net8.0\Quiz_Application.csproj.AssemblyReference.cache
 D:\SEMESTER_4\ASP.NET\PRACTICAL\Quiz_Application\Quiz_Application\obj\Debug\net8.0\Quiz_App.B68FF285.Up2Date
+D:\SEMESTER_4\ASP.NET\PRACTICAL\Quiz_Application\Quiz_Application\bin\Debug\net8.0\EPPlus.dll
+D:\SEMESTER_4\ASP.NET\PRACTICAL\Quiz_Application\Quiz_Application\bin\Debug\net8.0\EPPlus.Interfaces.dll
+D:\SEMESTER_4\ASP.NET\PRACTICAL\Quiz_Application\Quiz_Application\bin\Debug\net8.0\EPPlus.System.Drawing.dll
+D:\SEMESTER_4\ASP.NET\PRACTICAL\Quiz_Application\Quiz_Application\bin\Debug\net8.0\Microsoft.Extensions.Configuration.FileExtensions.dll
+D:\SEMESTER_4\ASP.NET\PRACTICAL\Quiz_Application\Quiz_Application\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Json.dll
+D:\SEMESTER_4\ASP.NET\PRACTICAL\Quiz_Application\Quiz_Application\bin\Debug\net8.0\Microsoft.IO.RecyclableMemoryStream.dll
+D:\SEMESTER_4\ASP.NET\PRACTICAL\Quiz_Application\Quiz_Application\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+D:\SEMESTER_4\ASP.NET\PRACTICAL\Quiz_Application\Quiz_Application\bin\Debug\net8.0\System.Drawing.Common.dll
+D:\SEMESTER_4\ASP.NET\PRACTICAL\Quiz_Application\Quiz_Application\bin\Debug\net8.0\System.Security.Cryptography.Pkcs.dll
+D:\SEMESTER_4\ASP.NET\PRACTICAL\Quiz_Application\Quiz_Application\bin\Debug\net8.0\runtimes\win\lib\net8.0\Microsoft.Win32.SystemEvents.dll
+D:\SEMESTER_4\ASP.NET\PRACTICAL\Quiz_Application\Quiz_Application\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll

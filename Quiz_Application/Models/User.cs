@@ -5,8 +5,8 @@ namespace Quiz_Application.Models
 {
     public class User
     {
-        [Required]
-        public int UserID { get; set; }
+        
+        public int? UserID { get; set; }
 
         [Required(ErrorMessage = "Username is required")]
         [StringLength(100, ErrorMessage = "Username cannot exceed 100 characters")]

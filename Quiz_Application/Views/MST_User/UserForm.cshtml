@@ -23,8 +23,9 @@
                         <body>
                             <div class="container mt-5">
                                 <h2 class="mb-4">Add/Edit User</h2>
-                                <form action="#" method="POST">
-                                    
+                                <form asp-action="UserSave" asp-controller="MST_User" method="POST">
+                                    <input type="hidden" asp-for="UserID" />
+
                                     <div class="mb-3">
                                         <label for="username" class="form-label"><span style="color: red;">*</span> User Name</label>
                                         <input asp-for="UserName" type="text" class="form-control" placeholder="Enter User Name">
@@ -32,7 +33,8 @@
                                     </div>
                                     <div class="mb-3">
                                         <label for="password" class="form-label"><span style="color: red;">*</span> Password</label>
-                                        <input asp-for="Password" type="password" class="form-control" placeholder="Enter Password">
+                                        <input asp-for="Password" type="password" class="form-control" placeholder="Enter Password"
+                                               value="@(Model.UserID > 0 ? "" : Model.Password)" >
                                         <span asp-validation-for="Password" class="form-text  text-danger "></span>
 
                                     </div>
@@ -51,20 +53,16 @@
                                     <div class="mb-3">
                                         <label for="isactive" class="form-label"><span style="color: red;">*</span> Is Active</label>
                                         <select asp-for="IsActive" class="form-control">
-                                            <option value="">-Select-</option>
-
-                                            <option value="1">Active</option>
-                                            <option value="0">Inactive</option>
+                                            <option value="true" selected="@(Model.IsActive ? "selected" : null)">Active</option>
+                                            <option value="false" selected="@(Model.IsActive ? null : "selected")">Inactive</option>
                                         </select>
                                         <span asp-validation-for="IsActive" class="form-text  text-danger"></span>
                                     </div>
                                     <div class="mb-3">
                                         <label for="isadmin" class="form-label"><span style="color: red;">*</span> Is Admin</label>
                                         <select asp-for="IsAdmin" class="form-control">
-                                            <option value="">-Select-</option>
-
-                                            <option value="1">Admin</option>
-                                            <option value="0">User</option>
+                                            <option value="true" selected="@(Model.IsAdmin ? "selected" : null)">Admin</option>
+                                            <option value="false" selected="@(Model.IsAdmin ? null : "selected")">User</option>
                                         </select>
                                         <span asp-validation-for="IsAdmin" class="form-text  text-danger"></span>
                                     </div>

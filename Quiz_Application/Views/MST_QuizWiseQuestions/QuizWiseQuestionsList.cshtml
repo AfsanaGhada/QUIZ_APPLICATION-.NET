@@ -27,33 +27,29 @@
                         <div>
                             <h5 class="card-title">Search Question</h5>
 
-                            <form class="row g-3">
-                                <div class="col-md-4">
-                                    <label for="questionlevelid" class="form-label">Question Level </label>
-                                    <select class="form-control" required>
-                                        <option value="" disabled selected>Select a Quiz</option>
-                                        <option value="Maths Quiz">Maths Quiz</option>
-                                        <option value="General Knowledge Quiz">General Knowledge Quiz</option>
-                                        <option value="Science Quiz">Science Quiz</option>
-                                        <option value="History Quiz">History Quiz</option>
-                                        <option value="Geography Quiz">Geography Quiz</option>
-                                        <option value="Sports Quiz">Sports Quiz</option>
-                                        <option value="Literature Quiz">Literature Quiz</option>
-                                        <option value="Technology Quiz">Technology Quiz</option>
-                                        <option value="Current Affairs Quiz">Current Affairs Quiz</option>
-                                        <option value="Music Quiz">Music Quiz</option>
-                                        <option value="Movie Trivia Quiz">Movie Trivia Quiz</option>
-                                        <option value="Logical Reasoning Quiz">Logical Reasoning Quiz</option>
-                                        <option value="Brain Teasers Quiz">Brain Teasers Quiz</option>
-                                        <option value="English Grammar Quiz">English Grammar Quiz</option>
-                                        <option value="Space & Astronomy Quiz">Space & Astronomy Quiz</option>
-                                    </select>
-                                </div>
-                                <div class="text-start">
-                                    <button type="submit" class="btn btn-success">Search</button>
-                                    <button type="reset" class="btn btn-danger">Reset</button>
-                                </div>
-                            </form><!-- End No Labels Form -->
+<form asp-action="QuizWiseQuestionSearch" method="get" class="row g-3">
+    <div class="col-md-4">
+        <label for="quizName" class="form-label">Quiz Name</label>
+        <input type="text" name="quizName" class="form-control" placeholder="Enter Quiz Name">
+    </div>
+
+    <div class="col-md-4">
+        <label for="question" class="form-label">Question</label>
+        <input type="text" name="question" class="form-control" placeholder="Enter Question Text">
+    </div>
+
+    <div class="col-md-4">
+        <label for="quizWiseQuestionID" class="form-label">Quiz Wise Question ID</label>
+        <input type="number" name="quizWiseQuestionID" class="form-control" placeholder="Enter ID">
+    </div>
+
+    <div class="col-md-12 text-start">
+        <button type="submit" class="btn btn-success">Search</button>
+        <button type="reset" class="btn btn-danger">Reset</button>
+    </div>
+</form>
+
+
                         </div>
 
                     </div>
@@ -64,7 +60,18 @@
     </section>
 
     <br />
-
+     <div class="text-danger">
+                            @{
+        if (@TempData["SuccessMessage"] != null)
+        {
+            <p>@TempData["SuccessMessage"]</P>
+    }
+     if (@TempData["ErrorMessage"] != null)
+        {
+            <p>@TempData["ErrorMessage"]</P>
+    }
+    }
+    </div>
     <section class="section">
         <div class="row">
             <div class="col-lg-12">
@@ -73,12 +80,18 @@
                     <div class="card-body">
                            
 
-                        <h5 class="card-title">QuizWiseQuestions List</h5>
+                        <h1 class="">QuizWiseQuestions List</h1>
+                                <div class="m-3">
+                                <a asp-controller="MST_QuizWiseQuestions" asp-action="ExportToExcel" class="btn btn-primary float-end ms-2">
+                                    <i class="fa fa-file-excel"></i> Download Excel
+                                </a>
+                            </div
                         <div class="d-flex p-3 justify-content-end">
-                            <a asp-controller="MST_QuizWiseQuestions" asp-action="QuizWiseQuestionsForm" class="btn btn-primary w-20">
+                            <a asp-controller="MST_QuizWiseQuestions" asp-action="QuizWiseQuestionsForm" class="btn btn-success  float-end">
                                 <i class="bi bi-plus"></i> Add QuizWiseQuestions
                             </a>
                         </div>
+   
                         <!-- Table with stripped rows -->
                         <table class="table datatable">
                            <thead>
@@ -104,11 +117,11 @@
                                         <td>@dataRow["Created"]</td>
                                         <td>@dataRow["Modified"]</td>
                                         <td>
-                                            <a asp-controller="MST_QuizWiseQuestions" asp-action="QuizWiseQuestionsForm" class="btn btn-primary">
+                                            <a asp-controller="MST_QuizWiseQuestions" asp-action="QuizWiseQuestionsForm" asp-route-QuizWiseQuestionsID="@dataRow["QuizWiseQuestionsID"]" class="btn btn-primary" onclick="return confirm('Are you sure you want to delete this QuuzWizeQuestion?')">
                                                 <i class="bi bi-pencil-fill"></i>Edit
 
                                             </a>
-                                            <a asp-controller="MST_QuizWiseQuestions" asp-action="QuizWiseQuestionsDelete" asp-route-QuizWiseQuestionsID="@dataRow["QuizWiseQuestionsID"]" class="btn btn-danger btn-xs">
+                                            <a asp-controller="MST_QuizWiseQuestions" asp-action="QuizWiseQuestionsDelete" asp-route-QuizWiseQuestionsID="@dataRow["QuizWiseQuestionsID"]" class="btn btn-danger btn-xs" onclick="return confirm('Are you sure you want to delete this QuuzWizeQuestion?')">
                                                 <i class="bi bi-trash">Delete</i>
                                             </a>
 

@@ -24,7 +24,7 @@
                     <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
 
                         <img src="~/assets/img/myprofile.jpg" alt="Profile" class="rounded-circle">
-                        <h2>Afsana Ghada</h2>
+                        <h2>@CommonVariable.UserName()</h2>
                         <h3>Web Designer</h3>
                         <div class="social-links mt-2">
                             <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
@@ -65,12 +65,12 @@
 
                             <div class="tab-pane fade show active profile-overview" id="profile-overview">
                                 <h5 class="card-title">About</h5>
-                                <p class="small fst-italic">Hi, I’m Afsana, a passionate and dedicated Software Engineer with a strong focus on problem-solving and innovation. With a deep understanding of software development principles, I specialize in designing and implementing scalable solutions that meet both user needs and business goals. My technical skills span various programming languages, frameworks, and tools, enabling me to work on a wide range of projects, from web and mobile apps to complex back-end systems.</p>
+                                <p class="small fst-italic">Hi, I’m @CommonVariable.UserName(), a passionate and dedicated Software Engineer with a strong focus on problem-solving and innovation. With a deep understanding of software development principles, I specialize in designing and implementing scalable solutions that meet both user needs and business goals. My technical skills span various programming languages, frameworks, and tools, enabling me to work on a wide range of projects, from web and mobile apps to complex back-end systems.</p>
                                 <h5 class="card-title">Profile Details</h5>
 
                                 <div class="row">
                                     <div class="col-lg-3 col-md-4 label ">Full Name</div>
-                                    <div class="col-lg-9 col-md-8">Ghada Afsana</div>
+                                    <div class="col-lg-9 col-md-8"> @CommonVariable.UserName()</div>
                                 </div>
 
                                 <div class="row">
@@ -100,7 +100,7 @@
 
                                 <div class="row">
                                     <div class="col-lg-3 col-md-4 label">Email</div>
-                                    <div class="col-lg-9 col-md-8">afsana@gmail.com</div>
+                                    <div class="col-lg-9 col-md-8">@(CommonVariable.UserName() + "@gmail.com")</div>
                                 </div>
 
                             </div>
@@ -130,7 +130,7 @@
                                     <div class="row mb-3">
                                         <label for="about" class="col-md-4 col-lg-3 col-form-label">About</label>
                                         <div class="col-md-8 col-lg-9">
-                                            <textarea name="about" class="form-control" id="about" style="height: 100px">Hi, I’m Afsana, a passionate and dedicated Software Engineer with a strong focus on problem-solving and innovation. With a deep understanding of software development principles, I specialize in designing and implementing scalable solutions that meet both user needs and business goals.</textarea>
+                                            <textarea name="about" class="form-control" id="about" style="height: 100px">Hi, I’m @CommonVariable.UserName(), a passionate and dedicated Software Engineer with a strong focus on problem-solving and innovation. With a deep understanding of software development principles, I specialize in designing and implementing scalable solutions that meet both user needs and business goals.</textarea>
                                         </div>
                                     </div>
 
@@ -172,7 +172,7 @@
                                     <div class="row mb-3">
                                         <label for="Email" class="col-md-4 col-lg-3 col-form-label">Email</label>
                                         <div class="col-md-8 col-lg-9">
-                                            <input name="email" type="email" class="form-control" id="Email" value="afsana@gmail.com">
+                                            <input name="email" type="email" class="form-control" id="Email" value="@(CommonVariable.UserName() + "@gmail.com")">
                                         </div>
                                     </div>
 
