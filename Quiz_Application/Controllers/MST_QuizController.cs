@@ -58,7 +58,7 @@ namespace Quiz_Application.Controllers
             SqlCommand command = connection.CreateCommand();
             command.CommandType = CommandType.StoredProcedure;
             command.CommandText = "Sp_MST_Quiz_SelectAllQuizzes";
-            command.Parameters.AddWithValue("@UserId", CommonVariable.UserID());//
+            //command.Parameters.AddWithValue("@UserId", CommonVariable.UserID());
             SqlDataReader reader = command.ExecuteReader();
             DataTable table = new DataTable();
             table.Load(reader);

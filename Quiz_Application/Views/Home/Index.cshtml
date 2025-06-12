@@ -1,9 +1,61 @@
 ﻿@model QuizApplication.Models.DashboardViewModel
 
-<main id="main" class="main"> 
+<main id="main" class="main">
 
-     <div class="pagetitle"> 
-         <h1>Dashboard</h1>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .card-modern {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            padding: 20px;
+            transition: transform 0.3s ease;
+        }
+
+            .card-modern:hover {
+                transform: translateY(-5px);
+            }
+
+            .card-modern .card-title {
+                font-size: 18px;
+                font-weight: bold;
+                color: #f0f0f0;
+            }
+
+            .card-modern .card-icon {
+                font-size: 30px;
+                margin-right: 15px;
+                color: #fff;
+            }
+
+        .card-table {
+            background-color: #ffffff;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+        }
+
+            .card-table h5 {
+                color: #333;
+                font-weight: 600;
+            }
+
+        .table-striped > tbody > tr:nth-of-type(odd) {
+            background-color: #f2f6ff;
+        }
+
+        .table th, .table td {
+            vertical-align: middle;
+        }
+    </style>
+
+    <div class="pagetitle">
+        <h1>Dashboard</h1>
         <nav>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a asp-action="Index" asp-controller="Home">Home</a></li>
@@ -12,263 +64,104 @@
         </nav>
     </div><!-- End Page Title -->
 
-    @* <div class="pagetitle"> *@
-    @*     <h1>Dashboard</h1> *@
-    @*     <nav> *@
-    @*         <ol class="breadcrumb"> *@
-    @*             <li class="breadcrumb-item"><a asp-action="Index" asp-controller="Home">Admin</a></li> *@
-    @*             <li class="breadcrumb-item active">Dashboard</li> *@
-    @*         </ol> *@
-    @*     </nav> *@
-    @* </div><!-- End Page Title --> *@
-
     <section class="section dashboard">
-        <div class="row">
-            <!-- Total Quizzes -->
-            <div class="col-xxl-4 col-md-4">
-                <div class="card info-card sales-card">
-                    <div class="card-body">
-                        <h5 class="card-title">Total Quizzes</h5>
-                        <div class="d-flex align-items-center">
-                            <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                                <i class="bi bi-book"></i>
-                            </div>
-                            <div class="ps-3">
-                                <h5>@Model.TotalQuizzes</h5>
-                            </div>
+        <div class="row text-white">
+            <div class="col-md-4">
+                <a href="@Url.Action("QuizList", "MST_Quiz")" style="text-decoration: none; color: inherit;">
+                    <div class="card-modern d-flex align-items-center" style="background: linear-gradient(135deg, #00c6ff, #0072ff);">
+                        <div class="card-icon"><i class="bi bi-book"></i></div>
+                        <div>
+                            <h5 class="card-title">Total Quizzes</h5>
+                            <h3>@Model.TotalQuizzes</h3>
                         </div>
                     </div>
-                </div>
+                </a>
             </div>
 
             <!-- Total Questions -->
-            <div class="col-xxl-4 col-md-4">
-                <div class="card info-card revenue-card">
-                    <div class="card-body">
-                        <h5 class="card-title">Total Questions</h5>
-                        <div class="d-flex align-items-center">
-                            <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                                <i class="bi bi-question-circle"></i>
-                            </div>
-                            <div class="ps-3">
-                                <h5>@Model.TotalQuestions</h5>
-                            </div>
+            <div class="col-md-4">
+                <a href="@Url.Action("QuestionList", "MST_Question")" style="text-decoration: none; color: inherit;">
+                    <div class="card-modern d-flex align-items-center" style="background: linear-gradient(135deg, #43cea2, #185a9d);">
+                        <div class="card-icon"><i class="bi bi-question-circle"></i></div>
+                        <div>
+                            <h5 class="card-title">Total Questions</h5>
+                            <h3>@Model.TotalQuestions</h3>
                         </div>
                     </div>
-                </div>
+                </a>
             </div>
 
-            <!-- Total Question Levels -->
-            <div class="col-xxl-4 col-md-4">
-                <div class="card info-card revenue-card">
-                    <div class="card-body">
-                        <h5 class="card-title">Total Question Levels</h5>
-                        <div class="d-flex align-items-center">
-                            <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                                <i class="bi bi-bar-chart"></i>
-                            </div>
-                            <div class="ps-3">
-                                <h5>@Model.TotalQuestionLevels</h5>
-                            </div>
+            <!-- Question Levels -->
+            <div class="col-md-4">
+                <a href="@Url.Action("QuestionLevelList", "MST_QuestionLevel")" style="text-decoration: none; color: inherit;">
+                    <div class="card-modern d-flex align-items-center" style="background: linear-gradient(135deg, #fc6076, #ff9a44);">
+                        <div class="card-icon"><i class="bi bi-bar-chart"></i></div>
+                        <div>
+                            <h5 class="card-title">Question Levels</h5>
+                            <h3>@Model.TotalQuestionLevels</h3>
                         </div>
                     </div>
-                </div>
+                </a>
             </div>
+
         </div>
 
-        <!-- Recent Quizzes Table -->
-        <div class="row">
+        <!-- Tables Section -->
+        <div class="row mt-4">
             <div class="col-lg-6">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Recent 10 Quizzes</h5>
-                        <table class="table table-striped">
-                            <thead>
+                <div class="card-table">
+                    <h5>Recent 10 Quizzes</h5>
+                    <table class="table table-striped">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Quiz ID</th>
+                                <th>Quiz Name</th>
+                                <th>Total Questions</th>
+                                <th>Quiz Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var quiz in Model.RecentQuizzes)
+                            {
                                 <tr>
-                                    <th>Quiz ID</th>
-                                    <th>Quiz Name</th>
-                                    <th>Total Questions</th>
-                                    <th>Quiz Date</th>
+                                    <td>@quiz.QuizID</td>
+                                    <td>@quiz.QuizName</td>
+                                    <td>@quiz.TotalQuestions</td>
+                                    <td>@quiz.QuizDate</td>
                                 </tr>
-                            </thead>
-                            <tbody>
-                                @foreach (var quiz in Model.RecentQuizzes)
-                                {
-                                    <tr>
-                                        <td>@quiz.QuizID</td>
-                                        <td>@quiz.QuizName</td>
-                                        <td>@quiz.TotalQuestions</td>
-                                        <td>@quiz.QuizDate</td>
-                                    </tr>
-                                }
-                            </tbody>
-                        </table>
-                    </div>
+                            }
+                        </tbody>
+                    </table>
                 </div>
             </div>
 
-            <!-- Recent Questions Table -->
             <div class="col-lg-6">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Recent 10 Questions</h5>
-                        <table class="table table-striped">
-                            <thead>
+                <div class="card-table">
+                    <h5>Recent 10 Questions</h5>
+                    <table class="table table-striped">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Question ID</th>
+                                <th>Question</th>
+                                <th>Marks</th>
+                                <th>Correct Option</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var question in Model.RecentQuestions)
+                            {
                                 <tr>
-                                    <th>Question ID</th>
-                                    <th>Question</th>
-                                    <th>Marks</th>
-                                    <th>Correct Option</th>
+                                    <td>@question.QuestionID</td>
+                                    <td>@question.QuestionText</td>
+                                    <td>@question.QuestionMarks</td>
+                                    <td>@question.CorrectOption</td>
                                 </tr>
-                            </thead>
-                            <tbody>
-                                @foreach (var question in Model.RecentQuestions)
-                                {
-                                    <tr>
-                                        <td>@question.QuestionID</td>
-                                        <td>@question.QuestionText</td>
-                                        <td>@question.QuestionMarks</td>
-                                        <td>@question.CorrectOption</td>
-                                    </tr>
-                                }
-                            </tbody>
-                        </table>
-                    </div>
+                            }
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
     </section>
- 
 
-</main><!-- End #main -->
-
-
-@* @model QuizApplication.Models.DashboardViewModel *@
-
-@* <div class="pagetitle"> *@
-@*     <h1>Dashboard</h1> *@
-@*     <nav> *@
-@*         <ol class="breadcrumb"> *@
-@*             <li class="breadcrumb-item"><a asp-action="Index" asp-controller="Home">Admin</a></li> *@
-@*             <li class="breadcrumb-item active">Dashboard</li> *@
-@*         </ol> *@
-@*     </nav> *@
-@* </div><!-- End Page Title --> *@
-
-@* <section class="section dashboard"> *@
-@*     <div class="row"> *@
-@*         <!-- Total Quizzes --> *@
-@*         <div class="col-xxl-4 col-md-6"> *@
-@*             <div class="card info-card sales-card"> *@
-@*                 <div class="card-body"> *@
-@*                     <h5 class="card-title">Total Quizzes</h5> *@
-@*                     <div class="d-flex align-items-center"> *@
-@*                         <div class="card-icon rounded-circle d-flex align-items-center justify-content-center"> *@
-@*                             <i class="bi bi-book"></i> *@
-@*                         </div> *@
-@*                         <div class="ps-3"> *@
-@*                             <h5>@Model.TotalQuizzes</h5> *@
-@*                         </div> *@
-@*                     </div> *@
-@*                 </div> *@
-@*             </div> *@
-@*         </div> *@
-
-@*         <!-- Total Questions --> *@
-@*         <div class="col-xxl-4 col-md-6"> *@
-@*             <div class="card info-card revenue-card"> *@
-@*                 <div class="card-body"> *@
-@*                     <h5 class="card-title">Total Questions</h5> *@
-@*                     <div class="d-flex align-items-center"> *@
-@*                         <div class="card-icon rounded-circle d-flex align-items-center justify-content-center"> *@
-@*                             <i class="bi bi-question-circle"></i> *@
-@*                         </div> *@
-@*                         <div class="ps-3"> *@
-@*                             <h5>@Model.TotalQuestions</h5> *@
-@*                         </div> *@
-@*                     </div> *@
-@*                 </div> *@
-@*             </div> *@
-@*         </div> *@
-
-@*         <!-- Total Question Levels --> *@
-@*         <div class="col-xxl-4 col-md-6"> *@
-@*             <div class="card info-card revenue-card"> *@
-@*                 <div class="card-body"> *@
-@*                     <h5 class="card-title">Total Question Levels</h5> *@
-@*                     <div class="d-flex align-items-center"> *@
-@*                         <div class="card-icon rounded-circle d-flex align-items-center justify-content-center"> *@
-@*                             <i class="bi bi-bar-chart"></i> *@
-@*                         </div> *@
-@*                         <div class="ps-3"> *@
-@*                             <h5>@Model.TotalQuestionLevels</h5> *@
-@*                         </div> *@
-@*                     </div> *@
-@*                 </div> *@
-@*             </div> *@
-@*         </div> *@
-@*     </div> *@
-
-@*     <!-- Recent Quizzes Table --> *@
-@*     <div class="row"> *@
-@*         <div class="col-lg-6"> *@
-@*             <div class="card"> *@
-@*                 <div class="card-body"> *@
-@*                     <h5 class="card-title">Recent 10 Quizzes</h5> *@
-@*                     <table class="table table-striped"> *@
-@*                         <thead> *@
-@*                             <tr> *@
-@*                                 <th>Quiz ID</th> *@
-@*                                 <th>Quiz Name</th> *@
-@*                                 <th>Total Questions</th> *@
-@*                                 <th>Quiz Date</th> *@
-@*                             </tr> *@
-@*                         </thead> *@
-@*                         <tbody> *@
-@*                             @foreach (var quiz in Model.RecentQuizzes) *@
-@*                             { *@
-@*                                 <tr> *@
-@*                                     <td>@quiz.QuizID</td> *@
-@*                                     <td>@quiz.QuizName</td> *@
-@*                                     <td>@quiz.TotalQuestions</td> *@
-@*                                     <td>@quiz.QuizDate</td> *@
-@*                                 </tr> *@
-@*                             } *@
-@*                         </tbody> *@
-@*                     </table> *@
-@*                 </div> *@
-@*             </div> *@
-@*         </div> *@
-
-@*         <!-- Recent Questions Table --> *@
-@*         <div class="col-lg-6"> *@
-@*             <div class="card"> *@
-@*                 <div class="card-body"> *@
-@*                     <h5 class="card-title">Recent 10 Questions</h5> *@
-@*                     <table class="table table-striped"> *@
-@*                         <thead> *@
-@*                             <tr> *@
-@*                                 <th>Question ID</th> *@
-@*                                 <th>Question</th> *@
-@*                                 <th>Marks</th> *@
-@*                                 <th>Correct Option</th> *@
-@*                             </tr> *@
-@*                         </thead> *@
-@*                         <tbody> *@
-@*                             @foreach (var question in Model.RecentQuestions) *@
-@*                             { *@
-@*                                 <tr> *@
-@*                                     <td>@question.QuestionID</td> *@
-@*                                     <td>@question.QuestionText</td> *@
-@*                                     <td>@question.QuestionMarks</td> *@
-@*                                     <td>@question.CorrectOption</td> *@
-@*                                 </tr> *@
-@*                             } *@
-@*                         </tbody> *@
-@*                     </table> *@
-@*                 </div> *@
-@*             </div> *@
-@*         </div> *@
-@*     </div> *@
-@* </section> *@
-
+</main>
